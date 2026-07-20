@@ -1,0 +1,32 @@
+name: watch-arb-scrape
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 22:00 UTC = 06:00 HKT daily (expect 10-30 min drift)
+  workflow_dispatch: {}     # manual trigger; also keeps repo active (60-day rule)
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Run scraper
+        env:
+          WATCHCHARTS_API_KEY: ${{ secrets.WATCHCHARTS_API_KEY }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+        run: python build.py
+      - name: Commit data
+        run: |
+          git config user.name "arb-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs/lots.json docs/meta.json
+          git commit -m "data: update lots $(date -u +%FT%TZ)" || echo "no changes"
+          git push
