@@ -16,7 +16,7 @@
   "estimate_low_usd": null,
   "estimate_high_usd": null,
   "estimate_low_hkd": null,
-  "current_bid": 4600.0,
+  "current_bid": 7000.0,
   "sold_price": null,
   "status": "live",
   "buyers_premium_pct": 10.0,
@@ -27,7 +27,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:17.826320+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -58,7 +58,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:17.826332+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -78,7 +78,7 @@
   "estimate_low_usd": null,
   "estimate_high_usd": null,
   "estimate_low_hkd": null,
-  "current_bid": 38000.0,
+  "current_bid": 47000.0,
   "sold_price": null,
   "status": "live",
   "buyers_premium_pct": 10.0,
@@ -89,7 +89,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:17.826175+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -109,7 +109,7 @@
   "estimate_low_usd": null,
   "estimate_high_usd": null,
   "estimate_low_hkd": null,
-  "current_bid": 13000.0,
+  "current_bid": 15500.0,
   "sold_price": null,
   "status": "live",
   "buyers_premium_pct": 10.0,
@@ -120,7 +120,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:17.826190+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -140,7 +140,7 @@
   "estimate_low_usd": null,
   "estimate_high_usd": null,
   "estimate_low_hkd": null,
-  "current_bid": 12500.0,
+  "current_bid": 26000.0,
   "sold_price": null,
   "status": "live",
   "buyers_premium_pct": 10.0,
@@ -151,7 +151,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:17.825949+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -168,9 +168,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 82550.0,
   "status": "past",
@@ -182,7 +182,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.951830+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -199,9 +199,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 57150.0,
   "status": "past",
@@ -213,7 +213,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.953305+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -230,9 +230,9 @@
   "estimate_low": 70000.0,
   "estimate_high": 140000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 86694.71,
-  "estimate_high_usd": 173389.43,
-  "estimate_low_hkd": 679669,
+  "estimate_low_usd": 86604.51,
+  "estimate_high_usd": 173209.02,
+  "estimate_low_hkd": 678994,
   "current_bid": null,
   "sold_price": 533400.0,
   "status": "past",
@@ -244,7 +244,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.953375+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -261,9 +261,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 241300.0,
   "status": "past",
@@ -275,7 +275,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.953514+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -292,9 +292,9 @@
   "estimate_low": 450000.0,
   "estimate_high": 900000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 557323.16,
-  "estimate_high_usd": 1114646.33,
-  "estimate_low_hkd": 4369298,
+  "estimate_low_usd": 556743.27,
+  "estimate_high_usd": 1113486.55,
+  "estimate_low_hkd": 4364962,
   "current_bid": null,
   "sold_price": 4875500.0,
   "status": "past",
@@ -306,7 +306,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.953578+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -323,9 +323,9 @@
   "estimate_low": 10000.0,
   "estimate_high": 20000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 12384.96,
-  "estimate_high_usd": 24769.92,
-  "estimate_low_hkd": 97096,
+  "estimate_low_usd": 12372.07,
+  "estimate_high_usd": 24744.15,
+  "estimate_low_hkd": 96999,
   "current_bid": null,
   "sold_price": 21590.0,
   "status": "past",
@@ -337,7 +337,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.953697+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -354,9 +354,9 @@
   "estimate_low": 6000.0,
   "estimate_high": 12000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 7430.98,
-  "estimate_high_usd": 14861.95,
-  "estimate_low_hkd": 58257,
+  "estimate_low_usd": 7423.24,
+  "estimate_high_usd": 14846.49,
+  "estimate_low_hkd": 58199,
   "current_bid": null,
   "sold_price": 11430.0,
   "status": "past",
@@ -368,7 +368,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.953790+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -385,9 +385,9 @@
   "estimate_low": 180000.0,
   "estimate_high": 360000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 222929.27,
-  "estimate_high_usd": 445858.53,
-  "estimate_low_hkd": 1747719,
+  "estimate_low_usd": 222697.31,
+  "estimate_high_usd": 445394.62,
+  "estimate_low_hkd": 1745985,
   "current_bid": null,
   "sold_price": 457200.0,
   "status": "past",
@@ -399,7 +399,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.953891+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -416,9 +416,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 44450.0,
   "status": "past",
@@ -430,7 +430,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.953936+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -447,9 +447,9 @@
   "estimate_low": 70000.0,
   "estimate_high": 140000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 86694.71,
-  "estimate_high_usd": 173389.43,
-  "estimate_low_hkd": 679669,
+  "estimate_low_usd": 86604.51,
+  "estimate_high_usd": 173209.02,
+  "estimate_low_hkd": 678994,
   "current_bid": null,
   "sold_price": 273050.0,
   "status": "past",
@@ -461,7 +461,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.954476+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -478,9 +478,9 @@
   "estimate_low": 250000.0,
   "estimate_high": 500000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 309623.98,
-  "estimate_high_usd": 619247.96,
-  "estimate_low_hkd": 2427388,
+  "estimate_low_usd": 309301.82,
+  "estimate_high_usd": 618603.64,
+  "estimate_low_hkd": 2424979,
   "current_bid": null,
   "sold_price": 711200.0,
   "status": "past",
@@ -492,7 +492,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.954895+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -509,9 +509,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 444500.0,
   "status": "past",
@@ -523,7 +523,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.954964+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -540,9 +540,9 @@
   "estimate_low": 60000.0,
   "estimate_high": 120000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 74309.76,
-  "estimate_high_usd": 148619.51,
-  "estimate_low_hkd": 582573,
+  "estimate_low_usd": 74232.44,
+  "estimate_high_usd": 148464.87,
+  "estimate_low_hkd": 581995,
   "current_bid": null,
   "sold_price": 190500.0,
   "status": "past",
@@ -554,7 +554,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.955234+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -585,7 +585,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.955490+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -602,9 +602,9 @@
   "estimate_low": 60000.0,
   "estimate_high": 120000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 74309.76,
-  "estimate_high_usd": 148619.51,
-  "estimate_low_hkd": 582573,
+  "estimate_low_usd": 74232.44,
+  "estimate_high_usd": 148464.87,
+  "estimate_low_hkd": 581995,
   "current_bid": null,
   "sold_price": 120650.0,
   "status": "past",
@@ -616,7 +616,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.955551+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -633,9 +633,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 63500.0,
   "status": "past",
@@ -647,7 +647,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.955637+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -664,9 +664,9 @@
   "estimate_low": 60000.0,
   "estimate_high": 120000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 74309.76,
-  "estimate_high_usd": 148619.51,
-  "estimate_low_hkd": 582573,
+  "estimate_low_usd": 74232.44,
+  "estimate_high_usd": 148464.87,
+  "estimate_low_hkd": 581995,
   "current_bid": null,
   "sold_price": 368300.0,
   "status": "past",
@@ -678,7 +678,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.955706+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -695,9 +695,9 @@
   "estimate_low": 60000.0,
   "estimate_high": 120000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 74309.76,
-  "estimate_high_usd": 148619.51,
-  "estimate_low_hkd": 582573,
+  "estimate_low_usd": 74232.44,
+  "estimate_high_usd": 148464.87,
+  "estimate_low_hkd": 581995,
   "current_bid": null,
   "sold_price": 95250.0,
   "status": "past",
@@ -709,7 +709,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.955767+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -726,9 +726,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 27940.0,
   "status": "past",
@@ -740,7 +740,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.956021+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -757,9 +757,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 152400.0,
   "status": "past",
@@ -771,7 +771,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.956119+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -788,9 +788,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 177800.0,
   "status": "past",
@@ -802,7 +802,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.956217+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -819,9 +819,9 @@
   "estimate_low": 350000.0,
   "estimate_high": 700000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 433473.57,
-  "estimate_high_usd": 866947.14,
-  "estimate_low_hkd": 3398343,
+  "estimate_low_usd": 433022.55,
+  "estimate_high_usd": 866045.09,
+  "estimate_low_hkd": 3394971,
   "current_bid": null,
   "sold_price": 3000000.0,
   "status": "past",
@@ -833,7 +833,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.956286+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -850,9 +850,9 @@
   "estimate_low": 50000.0,
   "estimate_high": 100000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 61924.8,
-  "estimate_high_usd": 123849.59,
-  "estimate_low_hkd": 485478,
+  "estimate_low_usd": 61860.36,
+  "estimate_high_usd": 123720.73,
+  "estimate_low_hkd": 484996,
   "current_bid": null,
   "sold_price": 165100.0,
   "status": "past",
@@ -864,7 +864,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.956576+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -881,9 +881,9 @@
   "estimate_low": 12000.0,
   "estimate_high": 24000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 14861.95,
-  "estimate_high_usd": 29723.9,
-  "estimate_low_hkd": 116515,
+  "estimate_low_usd": 14846.49,
+  "estimate_high_usd": 29692.97,
+  "estimate_low_hkd": 116399,
   "current_bid": null,
   "sold_price": 33020.0,
   "status": "past",
@@ -895,7 +895,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.956691+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -912,9 +912,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 279400.0,
   "status": "past",
@@ -926,7 +926,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.956857+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -943,9 +943,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 342900.0,
   "status": "past",
@@ -957,7 +957,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.956923+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -974,9 +974,9 @@
   "estimate_low": 140000.0,
   "estimate_high": 280000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 173389.43,
-  "estimate_high_usd": 346778.86,
-  "estimate_low_hkd": 1359337,
+  "estimate_low_usd": 173209.02,
+  "estimate_high_usd": 346418.04,
+  "estimate_low_hkd": 1357988,
   "current_bid": null,
   "sold_price": 355600.0,
   "status": "past",
@@ -988,7 +988,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.957059+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1005,9 +1005,9 @@
   "estimate_low": 35000.0,
   "estimate_high": 60000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 43347.36,
-  "estimate_high_usd": 74309.76,
-  "estimate_low_hkd": 339834,
+  "estimate_low_usd": 43302.25,
+  "estimate_high_usd": 74232.44,
+  "estimate_low_hkd": 339497,
   "current_bid": null,
   "sold_price": 82550.0,
   "status": "past",
@@ -1019,7 +1019,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.957339+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1036,9 +1036,9 @@
   "estimate_low": 60000.0,
   "estimate_high": 120000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 74309.76,
-  "estimate_high_usd": 148619.51,
-  "estimate_low_hkd": 582573,
+  "estimate_low_usd": 74232.44,
+  "estimate_high_usd": 148464.87,
+  "estimate_low_hkd": 581995,
   "current_bid": null,
   "sold_price": 215900.0,
   "status": "past",
@@ -1050,7 +1050,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.957401+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1067,9 +1067,9 @@
   "estimate_low": 100000.0,
   "estimate_high": 200000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 123849.59,
-  "estimate_high_usd": 247699.18,
-  "estimate_low_hkd": 970955,
+  "estimate_low_usd": 123720.73,
+  "estimate_high_usd": 247441.46,
+  "estimate_low_hkd": 969992,
   "current_bid": null,
   "sold_price": 190500.0,
   "status": "past",
@@ -1081,7 +1081,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.957463+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1098,9 +1098,9 @@
   "estimate_low": 25000.0,
   "estimate_high": 50000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 30962.4,
-  "estimate_high_usd": 61924.8,
-  "estimate_low_hkd": 242739,
+  "estimate_low_usd": 30930.18,
+  "estimate_high_usd": 61860.36,
+  "estimate_low_hkd": 242498,
   "current_bid": null,
   "sold_price": 88900.0,
   "status": "past",
@@ -1112,7 +1112,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.958188+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1129,9 +1129,9 @@
   "estimate_low": 300000.0,
   "estimate_high": 600000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 371548.78,
-  "estimate_high_usd": 743097.55,
-  "estimate_low_hkd": 2912866,
+  "estimate_low_usd": 371162.18,
+  "estimate_high_usd": 742324.37,
+  "estimate_low_hkd": 2909975,
   "current_bid": null,
   "sold_price": 825500.0,
   "status": "past",
@@ -1143,7 +1143,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.958250+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1160,9 +1160,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 95250.0,
   "status": "past",
@@ -1174,7 +1174,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.958374+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1191,9 +1191,9 @@
   "estimate_low": 400000.0,
   "estimate_high": 800000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 495398.37,
-  "estimate_high_usd": 990796.74,
-  "estimate_low_hkd": 3883821,
+  "estimate_low_usd": 494882.91,
+  "estimate_high_usd": 989765.82,
+  "estimate_low_hkd": 3879967,
   "current_bid": null,
   "sold_price": 1651000.0,
   "status": "past",
@@ -1205,7 +1205,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.958464+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1222,9 +1222,9 @@
   "estimate_low": 90000.0,
   "estimate_high": 180000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 111464.63,
-  "estimate_high_usd": 222929.27,
-  "estimate_low_hkd": 873860,
+  "estimate_low_usd": 111348.65,
+  "estimate_high_usd": 222697.31,
+  "estimate_low_hkd": 872992,
   "current_bid": null,
   "sold_price": 165100.0,
   "status": "past",
@@ -1236,7 +1236,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.959412+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1253,9 +1253,9 @@
   "estimate_low": 25000.0,
   "estimate_high": 50000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 30962.4,
-  "estimate_high_usd": 61924.8,
-  "estimate_low_hkd": 242739,
+  "estimate_low_usd": 30930.18,
+  "estimate_high_usd": 61860.36,
+  "estimate_low_hkd": 242498,
   "current_bid": null,
   "sold_price": 88900.0,
   "status": "past",
@@ -1267,7 +1267,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.959530+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1284,9 +1284,9 @@
   "estimate_low": 50000.0,
   "estimate_high": 100000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 61924.8,
-  "estimate_high_usd": 123849.59,
-  "estimate_low_hkd": 485478,
+  "estimate_low_usd": 61860.36,
+  "estimate_high_usd": 123720.73,
+  "estimate_low_hkd": 484996,
   "current_bid": null,
   "sold_price": 127000.0,
   "status": "past",
@@ -1298,7 +1298,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.959754+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1315,9 +1315,9 @@
   "estimate_low": 220000.0,
   "estimate_high": 400000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 272469.1,
-  "estimate_high_usd": 495398.37,
-  "estimate_low_hkd": 2136101,
+  "estimate_low_usd": 272185.6,
+  "estimate_high_usd": 494882.91,
+  "estimate_low_hkd": 2133982,
   "current_bid": null,
   "sold_price": 381000.0,
   "status": "past",
@@ -1329,7 +1329,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.959840+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1346,9 +1346,9 @@
   "estimate_low": 70000.0,
   "estimate_high": 140000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 86694.71,
-  "estimate_high_usd": 173389.43,
-  "estimate_low_hkd": 679669,
+  "estimate_low_usd": 86604.51,
+  "estimate_high_usd": 173209.02,
+  "estimate_low_hkd": 678994,
   "current_bid": null,
   "sold_price": 107950.0,
   "status": "past",
@@ -1360,7 +1360,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.959937+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1377,9 +1377,9 @@
   "estimate_low": 60000.0,
   "estimate_high": 120000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 74309.76,
-  "estimate_high_usd": 148619.51,
-  "estimate_low_hkd": 582573,
+  "estimate_low_usd": 74232.44,
+  "estimate_high_usd": 148464.87,
+  "estimate_low_hkd": 581995,
   "current_bid": null,
   "sold_price": 228600.0,
   "status": "past",
@@ -1391,7 +1391,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.960017+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1408,9 +1408,9 @@
   "estimate_low": 4000.0,
   "estimate_high": 8000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 4953.98,
-  "estimate_high_usd": 9907.97,
-  "estimate_low_hkd": 38838,
+  "estimate_low_usd": 4948.83,
+  "estimate_high_usd": 9897.66,
+  "estimate_low_hkd": 38800,
   "current_bid": null,
   "sold_price": 33020.0,
   "status": "past",
@@ -1422,7 +1422,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.960409+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1439,9 +1439,9 @@
   "estimate_low": 8000.0,
   "estimate_high": 16000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 9907.97,
-  "estimate_high_usd": 19815.93,
-  "estimate_low_hkd": 77676,
+  "estimate_low_usd": 9897.66,
+  "estimate_high_usd": 19795.32,
+  "estimate_low_hkd": 77599,
   "current_bid": null,
   "sold_price": 22860.0,
   "status": "past",
@@ -1453,7 +1453,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.960514+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1470,9 +1470,9 @@
   "estimate_low": 15000.0,
   "estimate_high": 30000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 18577.44,
-  "estimate_high_usd": 37154.88,
-  "estimate_low_hkd": 145643,
+  "estimate_low_usd": 18558.11,
+  "estimate_high_usd": 37116.22,
+  "estimate_low_hkd": 145499,
   "current_bid": null,
   "sold_price": 33020.0,
   "status": "past",
@@ -1484,7 +1484,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.960586+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1501,9 +1501,9 @@
   "estimate_low": 4000.0,
   "estimate_high": 8000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 4953.98,
-  "estimate_high_usd": 9907.97,
-  "estimate_low_hkd": 38838,
+  "estimate_low_usd": 4948.83,
+  "estimate_high_usd": 9897.66,
+  "estimate_low_hkd": 38800,
   "current_bid": null,
   "sold_price": 7620.0,
   "status": "past",
@@ -1515,7 +1515,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.960647+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1532,9 +1532,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 190500.0,
   "status": "past",
@@ -1546,7 +1546,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.960698+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1563,9 +1563,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 152400.0,
   "status": "past",
@@ -1577,7 +1577,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.960751+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1594,9 +1594,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 635000.0,
   "status": "past",
@@ -1608,7 +1608,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.960936+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1625,9 +1625,9 @@
   "estimate_low": 60000.0,
   "estimate_high": 120000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 74309.76,
-  "estimate_high_usd": 148619.51,
-  "estimate_low_hkd": 582573,
+  "estimate_low_usd": 74232.44,
+  "estimate_high_usd": 148464.87,
+  "estimate_low_hkd": 581995,
   "current_bid": null,
   "sold_price": 571500.0,
   "status": "past",
@@ -1639,7 +1639,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.961121+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1656,9 +1656,9 @@
   "estimate_low": 70000.0,
   "estimate_high": 140000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 86694.71,
-  "estimate_high_usd": 173389.43,
-  "estimate_low_hkd": 679669,
+  "estimate_low_usd": 86604.51,
+  "estimate_high_usd": 173209.02,
+  "estimate_low_hkd": 678994,
   "current_bid": null,
   "sold_price": 190500.0,
   "status": "past",
@@ -1670,7 +1670,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.961244+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1687,9 +1687,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 88900.0,
   "status": "past",
@@ -1701,7 +1701,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.962747+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1718,9 +1718,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 82550.0,
   "status": "past",
@@ -1732,7 +1732,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.962884+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1749,9 +1749,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 190500.0,
   "status": "past",
@@ -1763,7 +1763,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.962934+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1780,9 +1780,9 @@
   "estimate_low": 60000.0,
   "estimate_high": 120000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 74309.76,
-  "estimate_high_usd": 148619.51,
-  "estimate_low_hkd": 582573,
+  "estimate_low_usd": 74232.44,
+  "estimate_high_usd": 148464.87,
+  "estimate_low_hkd": 581995,
   "current_bid": null,
   "sold_price": 120650.0,
   "status": "past",
@@ -1794,7 +1794,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.963215+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1811,9 +1811,9 @@
   "estimate_low": 300000.0,
   "estimate_high": 600000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 371548.78,
-  "estimate_high_usd": 743097.55,
-  "estimate_low_hkd": 2912866,
+  "estimate_low_usd": 371162.18,
+  "estimate_high_usd": 742324.37,
+  "estimate_low_hkd": 2909975,
   "current_bid": null,
   "sold_price": 711200.0,
   "status": "past",
@@ -1825,7 +1825,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.963307+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1842,9 +1842,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 292100.0,
   "status": "past",
@@ -1856,7 +1856,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.963373+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1873,9 +1873,9 @@
   "estimate_low": 150000.0,
   "estimate_high": 300000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 185774.39,
-  "estimate_high_usd": 371548.78,
-  "estimate_low_hkd": 1456433,
+  "estimate_low_usd": 185581.09,
+  "estimate_high_usd": 371162.18,
+  "estimate_low_hkd": 1454987,
   "current_bid": null,
   "sold_price": 1714500.0,
   "status": "past",
@@ -1887,7 +1887,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.963427+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1904,9 +1904,9 @@
   "estimate_low": 60000.0,
   "estimate_high": 120000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 74309.76,
-  "estimate_high_usd": 148619.51,
-  "estimate_low_hkd": 582573,
+  "estimate_low_usd": 74232.44,
+  "estimate_high_usd": 148464.87,
+  "estimate_low_hkd": 581995,
   "current_bid": null,
   "sold_price": 120650.0,
   "status": "past",
@@ -1918,7 +1918,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.964487+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1935,9 +1935,9 @@
   "estimate_low": 100000.0,
   "estimate_high": 200000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 123849.59,
-  "estimate_high_usd": 247699.18,
-  "estimate_low_hkd": 970955,
+  "estimate_low_usd": 123720.73,
+  "estimate_high_usd": 247441.46,
+  "estimate_low_hkd": 969992,
   "current_bid": null,
   "sold_price": 177800.0,
   "status": "past",
@@ -1949,7 +1949,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.964565+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1966,9 +1966,9 @@
   "estimate_low": 120000.0,
   "estimate_high": 240000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 148619.51,
-  "estimate_high_usd": 297239.02,
-  "estimate_low_hkd": 1165146,
+  "estimate_low_usd": 148464.87,
+  "estimate_high_usd": 296929.75,
+  "estimate_low_hkd": 1163990,
   "current_bid": null,
   "sold_price": 215900.0,
   "status": "past",
@@ -1980,7 +1980,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.964629+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -1997,9 +1997,9 @@
   "estimate_low": 100000.0,
   "estimate_high": 200000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 123849.59,
-  "estimate_high_usd": 247699.18,
-  "estimate_low_hkd": 970955,
+  "estimate_low_usd": 123720.73,
+  "estimate_high_usd": 247441.46,
+  "estimate_low_hkd": 969992,
   "current_bid": null,
   "sold_price": 165100.0,
   "status": "past",
@@ -2011,7 +2011,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.964676+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2028,9 +2028,9 @@
   "estimate_low": 2000000.0,
   "estimate_high": 4000000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 2476991.84,
-  "estimate_high_usd": 4953983.68,
-  "estimate_low_hkd": 19419103,
+  "estimate_low_usd": 2474414.55,
+  "estimate_high_usd": 4948829.11,
+  "estimate_low_hkd": 19399833,
   "current_bid": null,
   "sold_price": 3242000.0,
   "status": "past",
@@ -2042,7 +2042,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.964811+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2059,9 +2059,9 @@
   "estimate_low": 25000.0,
   "estimate_high": 50000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 30962.4,
-  "estimate_high_usd": 61924.8,
-  "estimate_low_hkd": 242739,
+  "estimate_low_usd": 30930.18,
+  "estimate_high_usd": 61860.36,
+  "estimate_low_hkd": 242498,
   "current_bid": null,
   "sold_price": 76200.0,
   "status": "past",
@@ -2073,7 +2073,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.964970+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2090,9 +2090,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 508000.0,
   "status": "past",
@@ -2104,7 +2104,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.965085+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2121,9 +2121,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 60960.0,
   "status": "past",
@@ -2135,7 +2135,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.965199+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2152,9 +2152,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 57150.0,
   "status": "past",
@@ -2166,7 +2166,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.965299+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2183,9 +2183,9 @@
   "estimate_low": 450000.0,
   "estimate_high": 900000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 557323.16,
-  "estimate_high_usd": 1114646.33,
-  "estimate_low_hkd": 4369298,
+  "estimate_low_usd": 556743.27,
+  "estimate_high_usd": 1113486.55,
+  "estimate_low_hkd": 4364962,
   "current_bid": null,
   "sold_price": 2334500.0,
   "status": "past",
@@ -2197,7 +2197,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.965360+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2214,9 +2214,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 95250.0,
   "status": "past",
@@ -2228,7 +2228,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.965481+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2245,9 +2245,9 @@
   "estimate_low": 10000.0,
   "estimate_high": 20000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 12384.96,
-  "estimate_high_usd": 24769.92,
-  "estimate_low_hkd": 97096,
+  "estimate_low_usd": 12372.07,
+  "estimate_high_usd": 24744.15,
+  "estimate_low_hkd": 96999,
   "current_bid": null,
   "sold_price": 30480.0,
   "status": "past",
@@ -2259,7 +2259,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.965630+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2276,9 +2276,9 @@
   "estimate_low": 150000.0,
   "estimate_high": 300000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 185774.39,
-  "estimate_high_usd": 371548.78,
-  "estimate_low_hkd": 1456433,
+  "estimate_low_usd": 185581.09,
+  "estimate_high_usd": 371162.18,
+  "estimate_low_hkd": 1454987,
   "current_bid": null,
   "sold_price": 431800.0,
   "status": "past",
@@ -2290,7 +2290,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.965764+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2307,9 +2307,9 @@
   "estimate_low": 15000.0,
   "estimate_high": 30000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 18577.44,
-  "estimate_high_usd": 37154.88,
-  "estimate_low_hkd": 145643,
+  "estimate_low_usd": 18558.11,
+  "estimate_high_usd": 37116.22,
+  "estimate_low_hkd": 145499,
   "current_bid": null,
   "sold_price": 62230.0,
   "status": "past",
@@ -2321,7 +2321,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.965872+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2338,9 +2338,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 55880.0,
   "status": "past",
@@ -2352,7 +2352,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.966077+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2369,9 +2369,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 88900.0,
   "status": "past",
@@ -2383,7 +2383,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.966189+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2400,9 +2400,9 @@
   "estimate_low": 150000.0,
   "estimate_high": 300000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 185774.39,
-  "estimate_high_usd": 371548.78,
-  "estimate_low_hkd": 1456433,
+  "estimate_low_usd": 185581.09,
+  "estimate_high_usd": 371162.18,
+  "estimate_low_hkd": 1454987,
   "current_bid": null,
   "sold_price": 381000.0,
   "status": "past",
@@ -2414,7 +2414,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.967305+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2431,9 +2431,9 @@
   "estimate_low": 120000.0,
   "estimate_high": 240000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 148619.51,
-  "estimate_high_usd": 297239.02,
-  "estimate_low_hkd": 1165146,
+  "estimate_low_usd": 148464.87,
+  "estimate_high_usd": 296929.75,
+  "estimate_low_hkd": 1163990,
   "current_bid": null,
   "sold_price": 177800.0,
   "status": "past",
@@ -2445,7 +2445,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.967395+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2462,9 +2462,9 @@
   "estimate_low": 200000.0,
   "estimate_high": 400000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 247699.18,
-  "estimate_high_usd": 495398.37,
-  "estimate_low_hkd": 1941910,
+  "estimate_low_usd": 247441.46,
+  "estimate_high_usd": 494882.91,
+  "estimate_low_hkd": 1939983,
   "current_bid": null,
   "sold_price": 393700.0,
   "status": "past",
@@ -2476,7 +2476,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.967458+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2493,9 +2493,9 @@
   "estimate_low": 100000.0,
   "estimate_high": 200000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 123849.59,
-  "estimate_high_usd": 247699.18,
-  "estimate_low_hkd": 970955,
+  "estimate_low_usd": 123720.73,
+  "estimate_high_usd": 247441.46,
+  "estimate_low_hkd": 969992,
   "current_bid": null,
   "sold_price": 330200.0,
   "status": "past",
@@ -2507,7 +2507,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.968163+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2524,9 +2524,9 @@
   "estimate_low": 70000.0,
   "estimate_high": 140000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 86694.71,
-  "estimate_high_usd": 173389.43,
-  "estimate_low_hkd": 679669,
+  "estimate_low_usd": 86604.51,
+  "estimate_high_usd": 173209.02,
+  "estimate_low_hkd": 678994,
   "current_bid": null,
   "sold_price": 152400.0,
   "status": "past",
@@ -2538,7 +2538,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.968558+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2555,9 +2555,9 @@
   "estimate_low": 25000.0,
   "estimate_high": 45000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 30962.4,
-  "estimate_high_usd": 55732.32,
-  "estimate_low_hkd": 242739,
+  "estimate_low_usd": 30930.18,
+  "estimate_high_usd": 55674.33,
+  "estimate_low_hkd": 242498,
   "current_bid": null,
   "sold_price": 53340.0,
   "status": "past",
@@ -2569,7 +2569,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.968692+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2586,9 +2586,9 @@
   "estimate_low": 25000.0,
   "estimate_high": 50000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 30962.4,
-  "estimate_high_usd": 61924.8,
-  "estimate_low_hkd": 242739,
+  "estimate_low_usd": 30930.18,
+  "estimate_high_usd": 61860.36,
+  "estimate_low_hkd": 242498,
   "current_bid": null,
   "sold_price": 81280.0,
   "status": "past",
@@ -2600,7 +2600,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.968879+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2617,9 +2617,9 @@
   "estimate_low": 120000.0,
   "estimate_high": 240000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 148619.51,
-  "estimate_high_usd": 297239.02,
-  "estimate_low_hkd": 1165146,
+  "estimate_low_usd": 148464.87,
+  "estimate_high_usd": 296929.75,
+  "estimate_low_hkd": 1163990,
   "current_bid": null,
   "sold_price": 254000.0,
   "status": "past",
@@ -2631,7 +2631,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.968994+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2648,9 +2648,9 @@
   "estimate_low": 25000.0,
   "estimate_high": 50000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 30962.4,
-  "estimate_high_usd": 61924.8,
-  "estimate_low_hkd": 242739,
+  "estimate_low_usd": 30930.18,
+  "estimate_high_usd": 61860.36,
+  "estimate_low_hkd": 242498,
   "current_bid": null,
   "sold_price": 35560.0,
   "status": "past",
@@ -2662,7 +2662,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.969239+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2679,9 +2679,9 @@
   "estimate_low": 150000.0,
   "estimate_high": 300000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 185774.39,
-  "estimate_high_usd": 371548.78,
-  "estimate_low_hkd": 1456433,
+  "estimate_low_usd": 185581.09,
+  "estimate_high_usd": 371162.18,
+  "estimate_low_hkd": 1454987,
   "current_bid": null,
   "sold_price": 215900.0,
   "status": "past",
@@ -2693,7 +2693,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.969404+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2710,9 +2710,9 @@
   "estimate_low": 30000.0,
   "estimate_high": 60000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 37154.88,
-  "estimate_high_usd": 74309.76,
-  "estimate_low_hkd": 291287,
+  "estimate_low_usd": 37116.22,
+  "estimate_high_usd": 74232.44,
+  "estimate_low_hkd": 290998,
   "current_bid": null,
   "sold_price": 82550.0,
   "status": "past",
@@ -2724,7 +2724,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.969546+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2741,9 +2741,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 139700.0,
   "status": "past",
@@ -2755,7 +2755,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.969679+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2772,9 +2772,9 @@
   "estimate_low": 200000.0,
   "estimate_high": 400000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 247699.18,
-  "estimate_high_usd": 495398.37,
-  "estimate_low_hkd": 1941910,
+  "estimate_low_usd": 247441.46,
+  "estimate_high_usd": 494882.91,
+  "estimate_low_hkd": 1939983,
   "current_bid": null,
   "sold_price": 304800.0,
   "status": "past",
@@ -2786,7 +2786,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.969833+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2803,9 +2803,9 @@
   "estimate_low": 24000.0,
   "estimate_high": 48000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 29723.9,
-  "estimate_high_usd": 59447.8,
-  "estimate_low_hkd": 233029,
+  "estimate_low_usd": 29692.97,
+  "estimate_high_usd": 59385.95,
+  "estimate_low_hkd": 232798,
   "current_bid": null,
   "sold_price": 120650.0,
   "status": "past",
@@ -2817,7 +2817,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.969981+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2834,9 +2834,9 @@
   "estimate_low": 30000.0,
   "estimate_high": 60000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 37154.88,
-  "estimate_high_usd": 74309.76,
-  "estimate_low_hkd": 291287,
+  "estimate_low_usd": 37116.22,
+  "estimate_high_usd": 74232.44,
+  "estimate_low_hkd": 290998,
   "current_bid": null,
   "sold_price": 115570.0,
   "status": "past",
@@ -2848,7 +2848,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.970126+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2865,9 +2865,9 @@
   "estimate_low": 250000.0,
   "estimate_high": 500000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 309623.98,
-  "estimate_high_usd": 619247.96,
-  "estimate_low_hkd": 2427388,
+  "estimate_low_usd": 309301.82,
+  "estimate_high_usd": 618603.64,
+  "estimate_low_hkd": 2424979,
   "current_bid": null,
   "sold_price": 508000.0,
   "status": "past",
@@ -2879,7 +2879,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.970261+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2896,9 +2896,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 101600.0,
   "status": "past",
@@ -2910,7 +2910,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.970471+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2927,9 +2927,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 54610.0,
   "status": "past",
@@ -2941,7 +2941,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.970574+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2958,9 +2958,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 63500.0,
   "status": "past",
@@ -2972,7 +2972,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.970691+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -2989,9 +2989,9 @@
   "estimate_low": 70000.0,
   "estimate_high": 140000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 86694.71,
-  "estimate_high_usd": 173389.43,
-  "estimate_low_hkd": 679669,
+  "estimate_low_usd": 86604.51,
+  "estimate_high_usd": 173209.02,
+  "estimate_low_hkd": 678994,
   "current_bid": null,
   "sold_price": 508000.0,
   "status": "past",
@@ -3003,7 +3003,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.970856+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3020,9 +3020,9 @@
   "estimate_low": 350000.0,
   "estimate_high": 700000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 433473.57,
-  "estimate_high_usd": 866947.14,
-  "estimate_low_hkd": 3398343,
+  "estimate_low_usd": 433022.55,
+  "estimate_high_usd": 866045.09,
+  "estimate_low_hkd": 3394971,
   "current_bid": null,
   "sold_price": 1524000.0,
   "status": "past",
@@ -3034,7 +3034,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.971106+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3051,9 +3051,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 38100.0,
   "status": "past",
@@ -3065,7 +3065,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.971231+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3082,9 +3082,9 @@
   "estimate_low": 10000.0,
   "estimate_high": 20000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 12384.96,
-  "estimate_high_usd": 24769.92,
-  "estimate_low_hkd": 97096,
+  "estimate_low_usd": 12372.07,
+  "estimate_high_usd": 24744.15,
+  "estimate_low_hkd": 96999,
   "current_bid": null,
   "sold_price": 48260.0,
   "status": "past",
@@ -3096,7 +3096,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.971295+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3113,9 +3113,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 133350.0,
   "status": "past",
@@ -3127,7 +3127,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.971703+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3144,9 +3144,9 @@
   "estimate_low": 20000.0,
   "estimate_high": 40000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 24769.92,
-  "estimate_high_usd": 49539.84,
-  "estimate_low_hkd": 194191,
+  "estimate_low_usd": 24744.15,
+  "estimate_high_usd": 49488.29,
+  "estimate_low_hkd": 193998,
   "current_bid": null,
   "sold_price": 114300.0,
   "status": "past",
@@ -3158,7 +3158,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.971751+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3175,9 +3175,9 @@
   "estimate_low": 80000.0,
   "estimate_high": 160000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 99079.67,
-  "estimate_high_usd": 198159.35,
-  "estimate_low_hkd": 776764,
+  "estimate_low_usd": 98976.58,
+  "estimate_high_usd": 197953.16,
+  "estimate_low_hkd": 775993,
   "current_bid": null,
   "sold_price": 146050.0,
   "status": "past",
@@ -3189,7 +3189,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.971830+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3206,9 +3206,9 @@
   "estimate_low": 200000.0,
   "estimate_high": 400000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 247699.18,
-  "estimate_high_usd": 495398.37,
-  "estimate_low_hkd": 1941910,
+  "estimate_low_usd": 247441.46,
+  "estimate_high_usd": 494882.91,
+  "estimate_low_hkd": 1939983,
   "current_bid": null,
   "sold_price": 406400.0,
   "status": "past",
@@ -3220,7 +3220,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.971966+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3237,9 +3237,9 @@
   "estimate_low": 350000.0,
   "estimate_high": 650000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 433473.57,
-  "estimate_high_usd": 805022.35,
-  "estimate_low_hkd": 3398343,
+  "estimate_low_usd": 433022.55,
+  "estimate_high_usd": 804184.73,
+  "estimate_low_hkd": 3394971,
   "current_bid": null,
   "sold_price": 889000.0,
   "status": "past",
@@ -3251,7 +3251,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.972068+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3268,9 +3268,9 @@
   "estimate_low": 150000.0,
   "estimate_high": 300000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 185774.39,
-  "estimate_high_usd": 371548.78,
-  "estimate_low_hkd": 1456433,
+  "estimate_low_usd": 185581.09,
+  "estimate_high_usd": 371162.18,
+  "estimate_low_hkd": 1454987,
   "current_bid": null,
   "sold_price": 330200.0,
   "status": "past",
@@ -3282,7 +3282,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.972145+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3299,9 +3299,9 @@
   "estimate_low": 40000.0,
   "estimate_high": 80000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 49539.84,
-  "estimate_high_usd": 99079.67,
-  "estimate_low_hkd": 388382,
+  "estimate_low_usd": 49488.29,
+  "estimate_high_usd": 98976.58,
+  "estimate_low_hkd": 387997,
   "current_bid": null,
   "sold_price": 76200.0,
   "status": "past",
@@ -3313,7 +3313,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.972588+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3330,9 +3330,9 @@
   "estimate_low": 15000.0,
   "estimate_high": 30000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 18577.44,
-  "estimate_high_usd": 37154.88,
-  "estimate_low_hkd": 145643,
+  "estimate_low_usd": 18558.11,
+  "estimate_high_usd": 37116.22,
+  "estimate_low_hkd": 145499,
   "current_bid": null,
   "sold_price": 48260.0,
   "status": "past",
@@ -3344,7 +3344,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.972637+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3361,9 +3361,9 @@
   "estimate_low": 600000.0,
   "estimate_high": 1200000.0,
   "estimate_currency": "CHF",
-  "estimate_low_usd": 743097.55,
-  "estimate_high_usd": 1486195.11,
-  "estimate_low_hkd": 5825731,
+  "estimate_low_usd": 742324.37,
+  "estimate_high_usd": 1484648.73,
+  "estimate_low_hkd": 5819950,
   "current_bid": null,
   "sold_price": 1219200.0,
   "status": "past",
@@ -3375,7 +3375,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:02.972691+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3406,7 +3406,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.021560+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3437,7 +3437,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.021635+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3468,7 +3468,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.021684+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3499,7 +3499,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.021721+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3530,7 +3530,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.022650+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3561,7 +3561,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.022707+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3592,7 +3592,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.022991+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3623,7 +3623,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023035+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3654,7 +3654,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023076+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3685,7 +3685,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023168+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3716,7 +3716,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023208+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3747,7 +3747,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023241+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3778,7 +3778,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023280+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3809,7 +3809,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023321+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3840,7 +3840,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023361+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3871,7 +3871,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023906+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3902,7 +3902,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023952+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3933,7 +3933,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.023999+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3964,7 +3964,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.024064+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -3995,7 +3995,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.024127+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4026,7 +4026,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.024174+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4057,7 +4057,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.024221+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4088,7 +4088,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.024312+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4119,7 +4119,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.024350+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4150,7 +4150,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.024581+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4181,7 +4181,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025234+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4212,7 +4212,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025286+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4243,7 +4243,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025330+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4274,7 +4274,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025504+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4305,7 +4305,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025547+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4336,7 +4336,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025587+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4367,7 +4367,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025630+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4398,7 +4398,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025670+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4429,7 +4429,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025708+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4460,7 +4460,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025744+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4491,7 +4491,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025788+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4522,7 +4522,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025942+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4553,7 +4553,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.025990+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4584,7 +4584,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.026316+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4615,7 +4615,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.026576+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4646,7 +4646,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.026940+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4677,7 +4677,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.026982+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4708,7 +4708,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.027888+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4739,7 +4739,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.027940+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4770,7 +4770,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.027980+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4801,7 +4801,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.028073+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4832,7 +4832,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.028166+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4863,7 +4863,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.028657+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4894,7 +4894,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.028710+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4925,7 +4925,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.028755+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4956,7 +4956,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029297+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -4987,7 +4987,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029349+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5018,7 +5018,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029392+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5049,7 +5049,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029453+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5080,7 +5080,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029521+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5111,7 +5111,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029610+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5142,7 +5142,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029650+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5173,7 +5173,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029692+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5204,7 +5204,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029778+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5235,7 +5235,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.029947+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5266,7 +5266,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030038+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5297,7 +5297,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030079+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5328,7 +5328,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030124+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5359,7 +5359,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030170+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5390,7 +5390,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030208+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5421,7 +5421,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030434+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5452,7 +5452,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030607+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5483,7 +5483,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030648+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5514,7 +5514,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030689+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5545,7 +5545,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030725+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5576,7 +5576,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.030757+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5607,7 +5607,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.031489+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5638,7 +5638,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.031545+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5669,7 +5669,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.031600+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5700,7 +5700,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.031682+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5731,7 +5731,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.031731+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5762,7 +5762,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.032306+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5793,7 +5793,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.032353+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5824,7 +5824,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.032394+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5855,7 +5855,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.032577+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5886,7 +5886,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.032619+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5917,7 +5917,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.033404+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5948,7 +5948,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.033723+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -5979,7 +5979,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034071+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6010,7 +6010,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034213+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6041,7 +6041,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034414+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6072,7 +6072,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034517+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6103,7 +6103,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034605+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6134,7 +6134,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034651+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6165,7 +6165,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034698+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6196,7 +6196,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034736+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6227,7 +6227,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034774+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6258,7 +6258,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034850+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6289,7 +6289,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034925+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6320,7 +6320,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.034973+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6351,7 +6351,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035045+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6382,7 +6382,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035093+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6413,7 +6413,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035150+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6444,7 +6444,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035209+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6475,7 +6475,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035258+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6506,7 +6506,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035296+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6537,7 +6537,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035405+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6568,7 +6568,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035456+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6599,7 +6599,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035514+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6630,7 +6630,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035558+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6661,7 +6661,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035594+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6692,7 +6692,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035673+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6723,7 +6723,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035814+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6754,7 +6754,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035932+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6785,7 +6785,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.035999+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6816,7 +6816,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.036057+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6847,7 +6847,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.036598+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6878,7 +6878,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.036645+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6909,7 +6909,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.036684+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6940,7 +6940,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.036723+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -6971,7 +6971,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.036761+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7002,7 +7002,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.036927+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7033,7 +7033,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.037850+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7064,7 +7064,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.037930+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7095,7 +7095,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.038296+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7126,7 +7126,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.038695+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7157,7 +7157,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.038885+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7188,7 +7188,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.039094+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7219,7 +7219,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.039142+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7250,7 +7250,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.039186+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7281,7 +7281,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.039393+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7312,7 +7312,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.039436+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7343,7 +7343,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.039494+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7374,7 +7374,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.039551+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7405,7 +7405,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.039691+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7436,7 +7436,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.039906+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7467,7 +7467,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.040107+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7498,7 +7498,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.040157+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7529,7 +7529,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.040197+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7560,7 +7560,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.040661+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7591,7 +7591,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.040705+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7622,7 +7622,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.040745+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7653,7 +7653,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.041251+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7684,7 +7684,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.041296+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7715,7 +7715,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.041335+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7746,7 +7746,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.041723+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7777,7 +7777,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.041764+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7808,7 +7808,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:08.041829+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7839,7 +7839,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.836842+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7870,7 +7870,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.836993+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7901,7 +7901,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837120+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7932,7 +7932,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837166+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7963,7 +7963,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837212+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -7994,7 +7994,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837252+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8025,7 +8025,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837376+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8056,7 +8056,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837417+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8087,7 +8087,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837451+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8118,7 +8118,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837496+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8149,7 +8149,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837544+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8180,7 +8180,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837587+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8211,7 +8211,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.837972+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8242,7 +8242,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.838088+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8273,7 +8273,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.838251+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8304,7 +8304,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.838290+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8335,7 +8335,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.838330+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8366,7 +8366,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.838371+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8397,7 +8397,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.838409+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8428,7 +8428,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.838805+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8459,7 +8459,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.838929+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8490,7 +8490,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.838978+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8521,7 +8521,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839021+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8552,7 +8552,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839068+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8583,7 +8583,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839112+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8614,7 +8614,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839151+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8645,7 +8645,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839209+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8676,7 +8676,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839381+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8707,7 +8707,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839420+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8738,7 +8738,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839456+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8769,7 +8769,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839493+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8800,7 +8800,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839529+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8831,7 +8831,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839672+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8862,7 +8862,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839788+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8893,7 +8893,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.839856+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8924,7 +8924,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840231+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8955,7 +8955,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840282+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -8986,7 +8986,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840439+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9017,7 +9017,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840730+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9048,7 +9048,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840776+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9079,7 +9079,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840842+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9110,7 +9110,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840893+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9141,7 +9141,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840929+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9172,7 +9172,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840966+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9203,7 +9203,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.840998+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9234,7 +9234,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841123+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9265,7 +9265,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841346+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9296,7 +9296,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841500+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9327,7 +9327,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841583+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9358,7 +9358,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841619+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9389,7 +9389,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841652+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9420,7 +9420,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841684+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9451,7 +9451,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841748+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9482,7 +9482,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841877+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9513,7 +9513,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841922+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9544,7 +9544,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841960+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9575,7 +9575,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.841996+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9606,7 +9606,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842051+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9637,7 +9637,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842125+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9668,7 +9668,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842167+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9699,7 +9699,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842257+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9730,7 +9730,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842374+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9761,7 +9761,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842492+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9792,7 +9792,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842729+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9823,7 +9823,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842772+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9854,7 +9854,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842871+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9885,7 +9885,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842917+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9916,7 +9916,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842957+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9947,7 +9947,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.842996+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -9978,7 +9978,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.843035+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10009,7 +10009,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.843089+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10040,7 +10040,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.843326+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10071,7 +10071,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.844602+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10102,7 +10102,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.844853+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10133,7 +10133,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.844996+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10164,7 +10164,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.845052+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10195,7 +10195,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.845122+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10226,7 +10226,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.845767+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10257,7 +10257,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.845831+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10288,7 +10288,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.845876+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10319,7 +10319,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.845994+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10350,7 +10350,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.846052+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10381,7 +10381,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.846326+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10412,7 +10412,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.846459+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10443,7 +10443,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.846516+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10474,7 +10474,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.846595+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10505,7 +10505,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.846631+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10536,7 +10536,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.846834+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10567,7 +10567,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.847453+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10598,7 +10598,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.847491+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10629,7 +10629,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.847527+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  },
  {
@@ -10660,7 +10660,7 @@
   "arb_margin_pct": null,
   "arb_flag": false,
   "first_seen": "2026-07-18T02:12:14.847606+00:00",
-  "last_seen": "2026-07-18T02:14:51.929094+00:00",
+  "last_seen": "2026-07-20T09:22:18.046170+00:00",
   "is_new": false
  }
 ]
