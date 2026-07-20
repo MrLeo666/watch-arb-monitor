@@ -5,10 +5,12 @@ from datetime import datetime, timezone
 
 import requests
 
-from adapters import phillips, loupethis
+from adapters import phillips, loupethis, bezel, antiquorum
+import comps
 from adapters.base import Lot  # noqa: F401
 
 OUT_PATH = "docs/lots.json"
+ARCHIVE_PATH = "docs/archive.json"
 META_PATH = "docs/meta.json"
 
 # --- FX: fetch live rates with static fallback ---
@@ -43,6 +45,10 @@ def score(lot: dict, to_usd, usd_hkd):
         lot[k_dst] = round(v * rate, 2) if v is not None else None
     if lot.get("estimate_low_usd") is not None:
         lot["estimate_low_hkd"] = round(lot["estimate_low_usd"] * usd_hkd)
+    if lot.get("sold_price") is not None:
+        lot["sold_usd"] = round(lot["sold_price"] * rate, 2)
+    if lot.get("current_bid") is not None:
+        lot["current_bid_usd"] = round(lot["current_bid"] * rate, 2)
     # Basis for landed cost: live bid if present, else low estimate
     bid = lot.get("current_bid")
     basis = (bid * rate) if bid is not None else lot.get("estimate_low_usd")
@@ -97,7 +103,7 @@ def main():
     to_usd, usd_hkd = get_fx()
 
     raw = []
-    for mod in (phillips, loupethis):
+    for mod in (phillips, loupethis, bezel, antiquorum):
         try:
             raw += mod.run()
         except Exception as e:
@@ -119,6 +125,42 @@ def main():
                 new_lots.append(lot)
         lot["last_seen"] = now
         out.append(lot)
+
+    # Archive persistence: past lots that dropped off source listings are kept
+    # forever in archive.json — the comps engine compounds over time.
+    archive = []
+    if os.path.exists(ARCHIVE_PATH):
+        try:
+            with open(ARCHIVE_PATH, encoding="utf-8") as f:
+                archive = json.load(f)
+        except Exception:
+            archive = []
+    known = {l["lot_id"] for l in out}
+    arch_ids = {l["lot_id"] for l in archive}
+    for lid, old in prev.items():
+        if lid not in known and lid not in arch_ids and old.get("sold_usd"):
+            archive.append(old)
+    for l in out:
+        if l["status"] == "past" and l.get("sold_usd") and l["lot_id"] not in arch_ids:
+            archive.append(l)
+            arch_ids.add(l["lot_id"])
+    with open(ARCHIVE_PATH, "w", encoding="utf-8") as f:
+        json.dump(archive, f, ensure_ascii=False)
+    print(f"[archive] {len(archive)} realized lots banked")
+
+    # Internal comparables: derive fair value from realized archive (compounding)
+    idx = comps.build_index(archive)
+    enriched = 0
+    for lot in out:
+        if lot["status"] == "past" or lot.get("fair_value_usd"):
+            continue
+        fv, n = comps.fair_value(lot, idx)
+        if fv:
+            lot["fair_value_usd"] = fv
+            lot["fair_value_source"] = f"comps({n})"
+            score(lot, to_usd, usd_hkd)  # idempotent; now computes margin
+            enriched += 1
+    print(f"[comps] fair value assigned to {enriched} active lots")
 
     # sort: live/upcoming first by date, then past
     out.sort(key=lambda l: (l["status"] == "past", l.get("auction_date") or "9999"))

@@ -56,9 +56,11 @@ cd docs && python -m http.server 8000   # 瀏覽 http://localhost:8000
 
 | 階段 | 內容 | 狀態 |
 |---|---|---|
-| Phase 1 | Phillips(全部鐘錶專場,含過往成交作公允價參照)+ Loupe This(實時出價) | ✅ 已上線,已驗證 |
-| Phase 2 | 區域行/聚合器:Fellows(可直連,待寫 parser)、Antiquorum、Dorotheum、Poly HK;the-saleroom / Catawiki / Invaluable 有 WAF,需 Playwright + 住宅代理或付費 Apify actor,或改用其官方 email 提醒 | 🔜 |
-| Phase 3 | WatchCharts 公允價接入 → 毛利計算與套利標記全自動;賣出情境比較(Phillips vs Sotheby's vs 經銷寄售) | 🔜 |
+| Phase 1 | Phillips(全部鐘錶專場,含過往成交作公允價參照)+ Loupe This(實時出價) | ✅ 已驗證 |
+| Phase 2a | Bezel(0% 買家佣金、實時出價、圖片)+ Antiquorum(自動發現場次、EUR 估價、圖片);儀表板加入縮圖欄 | ✅ 已驗證 |
+| Phase 2b | 已實測被 WAF/JS 擋、暫緩:Catawiki、the-saleroom、Bukowskis、Heritage(403)、Watches of Knightsbridge、Fortuna(202 challenge)、Dorotheum / Poly HK / Artcurial(JS 渲染);替代:官方 email 提醒或付費 Apify | 🔜 |
+| Phase 3a | 內部比價引擎(comps.py):以自家成交檔案(docs/archive.json,每日自動累積、永久保存)推算公允價與毛利;含離散度與合理性雙重守衛防錯配 | ✅ 已上線 |
+| Phase 3b | WatchCharts 公允價接入(提高覆蓋率與精度);賣出情境比較(Phillips vs Sotheby's vs 經銷寄售) | 🔜 |
 
 ## 已知限制(誠實聲明)
 
@@ -76,6 +78,8 @@ cd docs && python -m http.server 8000   # 瀏覽 http://localhost:8000
 adapters/base.py        # Lot 資料模型 + 品牌白名單與別名匹配
 adapters/phillips.py    # Phillips adapter(已驗證)
 adapters/loupethis.py   # Loupe This adapter(已驗證)
+adapters/bezel.py       # Bezel adapter(已驗證,0% BP + 實時出價)
+adapters/antiquorum.py  # Antiquorum adapter(已驗證,自動發現場次)
 build.py                # 主程式:抓取→匯率→評分→變更偵測→通知→輸出
 docs/index.html         # 繁中儀表板(GitHub Pages)
 docs/lots.json          # 資料(由 build.py 產生,Actions 每日提交)

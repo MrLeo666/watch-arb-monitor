@@ -54,6 +54,9 @@ td.num,th.num{text-align:right}
 .chip.up{color:var(--blue);border-color:#2b4258}
 .chip.review{color:var(--red);border-color:#5a2e2e}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.thumb{width:52px;height:52px;object-fit:cover;border-radius:8px;border:1px solid var(--line);display:block;background:var(--panel2)}
+.thumb-empty{width:52px;height:52px;border-radius:8px;border:1px dashed var(--line)}
+tr:hover .thumb{border-color:var(--gold-dim)}
 .sold{color:var(--gold)}
 .margin-pos{color:var(--green);font-weight:600}
 .empty{padding:60px 0;text-align:center;color:var(--muted)}
@@ -94,7 +97,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;paddin
 <main id="main"></main>
 
 <footer>
-  買家佣金、稅費依各場 Conditions of Sale 為準。過往成交價僅供公允價參考。私人研究用途。
+  買家佣金、稅費依各場 Conditions of Sale 為準。公允價(comps)由內部成交檔案自動比對,未經品相/配件調整,僅供初篩;毛利為估算。私人研究用途。
 </footer>
 
 <script>
@@ -152,6 +155,7 @@ function render(){
     const g=groups[b].sort((x,y)=>(x.status==='past')-(y.status==='past')||(x.auction_date||'').localeCompare(y.auction_date||''));
     html+=`<div class="brand-head"><h2>${b}</h2><span class="n">${g.length} 件</span></div>
     <table><thead><tr>
+      <th style="width:64px">圖</th>
       <th style="width:110px">狀態</th><th>拍品</th><th class="hide-m">平台 / 場次</th>
       <th style="width:100px">日期</th>
       <th class="num">估價</th><th class="num hide-m">USD</th>
@@ -164,7 +168,11 @@ function render(){
       else if(l.sold_price!=null){px=`${l.estimate_currency} ${fmt(l.sold_price)}`;cls='mono sold';}
       const mr=l.arb_margin_pct!=null?`<span class="${l.arb_margin_pct>0?'margin-pos':''}">${l.arb_margin_pct}</span>`:'—';
       const rev=l.manual_review?' <span class="chip review">須人工核對</span>':'';
+      const thumb=l.image_url
+        ?`<a href="${l.source_url}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${l.image_url}" alt="" onerror="this.style.display='none'"></a>`
+        :'<div class="thumb thumb-empty"></div>';
       html+=`<tr class="${l.is_new?'newlot':''}">
+        <td>${thumb}</td>
         <td>${statusChip(l)}</td>
         <td class="title-cell"><a href="${l.source_url}" target="_blank" rel="noopener">${l.title_raw||''}</a>${rev}
           <div class="sub hide-m">Lot ${l.lot_number||'—'}</div></td>

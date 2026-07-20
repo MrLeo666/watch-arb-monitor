@@ -11,8 +11,13 @@ from .base import Lot, match_brand, MANUAL_REVIEW_BRANDS
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                           "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"}
 BASE = "https://www.phillips.com"
-EST_RE = re.compile(r"([A-Z]{3})\s?([\d,]+)\s*[–\-]\s*(?:[A-Z]{3}\s?)?([\d,]+)")
-PRICE_RE = re.compile(r"([A-Z]{3})\s?([\d,]+)")
+CUR_PAT = r"(HK\$|US\$|CHF|EUR|GBP|SGD|JPY|£|€|\$)"
+CUR_MAP = {"HK$": "HKD", "US$": "USD", "$": "USD", "£": "GBP", "€": "EUR"}
+EST_RE = re.compile(CUR_PAT + r"\s?([\d,]+)\s*[–\-]\s*(?:" + CUR_PAT + r"\s?)?([\d,]+)")
+PRICE_RE = re.compile(CUR_PAT + r"\s?([\d,]+)")
+
+def _cur(sym):
+    return CUR_MAP.get(sym, sym)
 
 def discover_watch_sales():
     """Watch department sale codes follow <LOC>08<seq><yy>; scrape them from /watches."""
@@ -58,9 +63,22 @@ def fetch_auction(sale_code: str):
         href = a.get("href", "")
         if "/detail/" not in href or href in seen:
             continue
-        # climb one level: tile container is the anchor's parent grid item
+        # climb: tile container may hold Estimate at parent level but Sold For
+        # one or two levels higher — climb up to 3 hops until both captured
         tile = a.parent
         text = tile.get_text(" | ", strip=True) if tile else a.get_text(" | ", strip=True)
+        hops = 0
+        while (tile is not None and hops < 3
+               and ("Estimate" not in text or "Sold For" not in text)
+               and len(text) < 500):
+            nxt = tile.parent
+            if nxt is None:
+                break
+            ntext = nxt.get_text(" | ", strip=True)
+            if len(ntext) > 600:  # climbed out of the tile into the grid
+                break
+            tile, text = nxt, ntext
+            hops += 1
         if "Estimate" not in text:
             continue
         seen.add(href)
@@ -70,12 +88,13 @@ def fetch_auction(sale_code: str):
         parts = [p.strip() for p in text.split("|")]
         lot_number = parts[0] if parts and parts[0].isdigit() else ""
         est = EST_RE.search(text)
-        cur, lo, hi = (est.group(1), _num(est.group(2)), _num(est.group(3))) if est else ("", None, None)
+        cur, lo, hi = (_cur(est.group(1)), _num(est.group(2)), _num(est.group(4))) if est else ("", None, None)
         sold = None
         if "Sold For" in text:
             m = PRICE_RE.search(text.split("Sold For", 1)[1])
             if m:
                 sold = _num(m.group(2))
+                # sold currency always equals estimate currency on Phillips tiles
         img = ""
         img_el = tile.find("img") if tile else None
         if img_el:
