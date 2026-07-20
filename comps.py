@@ -64,6 +64,8 @@ def fair_value(lot, idx, min_comps=2, min_overlap=2):
         return None, 0
     m = median(tier)
     trimmed = [p for p in tier if m / 3 <= p <= m * 3] or tier
+    if len(trimmed) < min_comps:
+        return None, 0
     # dispersion guard: comps disagreeing >4x among themselves = unreliable match
     if max(trimmed) / max(min(trimmed), 1) > 4:
         return None, 0

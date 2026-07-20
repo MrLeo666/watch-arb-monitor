@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 import requests
 
-from adapters import phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend
+from adapters import phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend, allu
 import comps
 from adapters.base import Lot  # noqa: F401
 
@@ -103,7 +103,7 @@ def main():
     to_usd, usd_hkd = get_fx()
 
     raw = []
-    for mod in (phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend):
+    for mod in (phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend, allu):
         try:
             raw += mod.run()
         except Exception as e:
