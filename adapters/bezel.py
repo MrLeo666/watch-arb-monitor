@@ -41,7 +41,7 @@ def run():
         out.append(Lot(
             lot_id=f"bezel_{r.get('id')}",
             platform="Bezel", platform_type="online",
-            source_url=f"https://shop.getbezel.com/listing/{r.get('id')}",
+            source_url=f"https://shop.getbezel.com/listings/{r.get('id')}",
             auction_name="Bezel Auctions",
             auction_date=(info.get("endDate") or "")[:10],
             brand=brand, brand_matched_keyword=kw, title_raw=title,
