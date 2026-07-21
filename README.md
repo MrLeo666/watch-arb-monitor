@@ -60,7 +60,8 @@ cd docs && python -m http.server 8000   # 瀏覽 http://localhost:8000
 | Phase 2a | Bezel(0% 買家佣金、實時出價、圖片)+ Antiquorum(自動發現場次、EUR 估價、圖片);儀表板加入縮圖欄 | ✅ 已驗證 |
 | Phase 2b | 已實測被 WAF/JS 擋、暫緩:Catawiki、the-saleroom、Bukowskis、Heritage(403)、Watches of Knightsbridge、Fortuna(202 challenge)、Dorotheum / Poly HK / Artcurial(JS 渲染);替代:官方 email 提醒或付費 Apify | 🔜 |
 | Phase 3a | 內部比價引擎(comps.py):以自家成交檔案(docs/archive.json,每日自動累積、永久保存)推算公允價與毛利;含離散度與合理性雙重守衛防錯配 | ✅ 已上線 |
-| Phase 3b | WatchCharts 公允價接入(提高覆蓋率與精度);賣出情境比較(Phillips vs Sotheby's vs 經銷寄售) | 🔜 |
+| Phase 3b | Chrono24 參考編號定價(c24.py):同 ref 最低要價×0.85 作保守出貨淨得,7 天緩存,優先於 comps | ✅ 已上線 |
+| Phase 3c | WatchCharts 接入、賣出情境比較 | 🔜 |
 
 ## 已知限制(誠實聲明)
 

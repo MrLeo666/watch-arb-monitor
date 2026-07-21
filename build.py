@@ -7,6 +7,8 @@ import requests
 
 from adapters import phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend, allu
 import comps
+import c24
+import c24
 from adapters.base import Lot  # noqa: F401
 
 OUT_PATH = "docs/lots.json"
@@ -161,6 +163,16 @@ def main():
             score(lot, to_usd, usd_hkd)  # idempotent; now computes margin
             enriched += 1
     print(f"[comps] fair value assigned to {enriched} active lots")
+
+    # Chrono24 lowest-ask by reference number (precise match). When available,
+    # margin uses conservative dealer-channel net: c24_low * 0.85, replacing
+    # the token-matched comps basis for that lot.
+    c24.enrich(out)
+    for lot in out:
+        if lot.get("c24_low_usd") and lot["status"] != "past":
+            lot["fair_value_usd"] = round(lot["c24_low_usd"] * 0.85)
+            lot["fair_value_source"] = f"C24({lot.get('c24_count')})"
+            score(lot, to_usd, usd_hkd)
 
     # sort: live/upcoming first by date, then past
     out.sort(key=lambda l: (l["status"] == "past", l.get("auction_date") or "9999"))
