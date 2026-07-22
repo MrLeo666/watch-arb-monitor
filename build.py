@@ -8,7 +8,6 @@ import requests
 from adapters import phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend, allu
 import comps
 import c24
-import c24
 from adapters.base import Lot  # noqa: F401
 
 OUT_PATH = "docs/lots.json"

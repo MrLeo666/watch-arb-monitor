@@ -62,6 +62,7 @@ cd docs && python -m http.server 8000   # 瀏覽 http://localhost:8000
 | Phase 3a | 內部比價引擎(comps.py):以自家成交檔案(docs/archive.json,每日自動累積、永久保存)推算公允價與毛利;含離散度與合理性雙重守衛防錯配 | ✅ 已上線 |
 | Phase 3b | Chrono24 參考編號定價(c24.py):同 ref 最低要價×0.85 作保守出貨淨得,7 天緩存,優先於 comps | ✅ 已上線 |
 | Phase 3c | WatchCharts 接入、賣出情境比較 | 🔜 |
+| Phase 4 | Watch Collecting(Algolia SSR,實時出價)+ Monaco Legend(自動發現場次,CHF/EUR 估價)+ Allu(日本 Valuence 拍賣,JPY 估價;出價需會員資格,僅作行情參照) | ✅ 已驗證 |
 
 ## 已知限制(誠實聲明)
 
@@ -81,9 +82,16 @@ adapters/phillips.py    # Phillips adapter(已驗證)
 adapters/loupethis.py   # Loupe This adapter(已驗證)
 adapters/bezel.py       # Bezel adapter(已驗證,0% BP + 實時出價)
 adapters/antiquorum.py  # Antiquorum adapter(已驗證,自動發現場次)
+adapters/watchcollecting.py  # Watch Collecting adapter(已驗證,Algolia SSR 實時出價)
+adapters/monacolegend.py     # Monaco Legend adapter(已驗證,自動發現場次)
+adapters/allu.py        # Allu adapter(已驗證,日本 Valuence 拍賣,JPY)
 build.py                # 主程式:抓取→匯率→評分→變更偵測→通知→輸出
+comps.py                # 內部比價引擎:以 archive.json 成交檔案推算公允價
+c24.py                  # Chrono24 參考編號定價(7 天緩存)
 docs/index.html         # 繁中儀表板(GitHub Pages)
 docs/lots.json          # 資料(由 build.py 產生,Actions 每日提交)
+docs/archive.json       # 成交檔案(每日累積、永久保存,comps 公允價基礎)
+docs/c24_cache.json     # Chrono24 查價緩存
 .github/workflows/scrape.yml
 requirements.txt
 ```
