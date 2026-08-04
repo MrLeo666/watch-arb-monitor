@@ -44,7 +44,7 @@ main{max-width:1400px;margin:0 auto;padding:10px 22px 70px}
 .trow{display:table-row}
 .lot{display:table-row}
 .cell{display:table-cell;padding:9px 10px;border-bottom:1px solid #1b222c;vertical-align:top}
-.thead .cell{color:var(--muted);font-weight:500;font-size:11px;letter-spacing:1px;text-transform:uppercase;text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+.thead .cell{color:var(--muted);font-weight:500;font-size:11px;letter-spacing:1px;text-transform:uppercase;text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
 .lot:hover .cell{background:var(--panel)}
 .lot.newlot .cell{background:rgba(201,169,97,.07)}
 .lot.newlot .cell.c-img{box-shadow:inset 3px 0 0 var(--gold)}
@@ -111,7 +111,6 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;paddin
   .cell.c-platform{grid-column:2;font-size:11px;color:var(--muted);overflow-wrap:anywhere}
   .cell.c-platform .sub{display:inline;font-size:11px;margin-top:0}
   .cell.c-platform .sub::before{content:" · "}
-  .cell.c-usd{display:none}
   .cell.c-date,.cell.c-est,.cell.c-price,.cell.c-fv,.cell.c-margin{
     grid-column:1/-1;display:flex;justify-content:space-between;align-items:baseline;gap:12px;
     padding:6px 0;border-top:1px solid #222b36;text-align:right;width:auto;
@@ -226,7 +225,7 @@ function render(){
       <div class="cell c-img">圖</div>
       <div class="cell c-status">狀態</div><div class="cell c-title">拍品</div><div class="cell c-platform">平台 / 場次</div>
       <div class="cell c-date">日期</div>
-      <div class="cell c-est num">估價</div><div class="cell c-usd num">USD</div>
+      <div class="cell c-est num">估價</div>
       <div class="cell c-price num">現價 / 成交</div><div class="cell c-fv num">公允 USD</div><div class="cell c-margin num">毛利%</div>
     </div></div>`;
     for(const l of g){
@@ -261,7 +260,6 @@ function render(){
         <div class="cell c-platform">${l.platform}${l.auction_name&&l.auction_name!==l.platform?`<div class="sub">${l.auction_name}</div>`:''}</div>
         <div class="cell c-date"><span class="lbl">日期</span><span class="val mono">${l.auction_date||'—'}</span></div>
         <div class="cell c-est num"><span class="lbl">估價</span><span class="val mono">${est}${estSub?`<span class="val-sub">${estSub}</span>`:''}</span></div>
-        <div class="cell c-usd num"><span class="lbl">USD</span><span class="val mono">${fmt(l.estimate_low_usd)}</span></div>
         <div class="cell c-price num"><span class="lbl">${l.status==='past'?'成交價':'現價'}</span><span class="val ${cls}">${px}${pxSub?`<span class="val-sub">${pxSub}</span>`:''}</span></div>
         <div class="cell c-fv num"><span class="lbl">公允 USD</span><span class="val mono">${fv}</span></div>
         <div class="cell c-margin num"><span class="lbl">毛利%</span><span class="val mono">${mr}</span></div>
