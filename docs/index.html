@@ -70,6 +70,7 @@ main{max-width:1400px;margin:0 auto;padding:10px 22px 70px}
 #peek img{display:block;max-width:420px;max-height:420px;border-radius:8px}
 .sold{color:var(--gold)}
 .margin-pos{color:var(--green);font-weight:600}
+.val-sub{display:block;font-size:10px;color:var(--muted);margin-top:1px;font-family:"Noto Sans TC",system-ui,sans-serif}
 .empty{padding:60px 0;text-align:center;color:var(--muted)}
 footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;padding:16px 22px;max-width:1400px;margin:0 auto}
 
@@ -109,14 +110,18 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;paddin
   .cell.c-title{grid-column:2;min-width:0;overflow-wrap:anywhere}
   .cell.c-platform{grid-column:2;font-size:11px;color:var(--muted);overflow-wrap:anywhere}
   .cell.c-platform .sub{display:inline;font-size:11px;margin-top:0}
+  .cell.c-platform .sub::before{content:" · "}
   .cell.c-usd{display:none}
   .cell.c-date,.cell.c-est,.cell.c-price,.cell.c-fv,.cell.c-margin{
     grid-column:1/-1;display:flex;justify-content:space-between;align-items:baseline;gap:12px;
-    padding:6px 0;border-top:1px solid #222b36;text-align:right;
+    padding:6px 0;border-top:1px solid #222b36;text-align:right;width:auto;
   }
   .cell.c-date{margin-top:6px}
-  .cell .lbl{display:inline;color:var(--muted);font-size:11px;letter-spacing:.5px;text-align:left}
+  .lot.st-upcoming .cell.c-price{display:none}
+  .lot.st-past .cell.c-est{display:none}
+  .cell .lbl{display:inline;color:var(--muted);font-size:11px;letter-spacing:.5px;text-align:left;white-space:nowrap}
   .cell .val{min-width:0;overflow-wrap:anywhere}
+  .cell.c-date .val{white-space:nowrap}
   .cell.c-fv .sub{font-size:10px;margin-top:0}
   .m-lot{display:none}
   #peek{display:none !important}
@@ -225,10 +230,22 @@ function render(){
       <div class="cell c-price num">現價 / 成交</div><div class="cell c-fv num">公允 USD</div><div class="cell c-margin num">毛利%</div>
     </div></div>`;
     for(const l of g){
-      const est=l.estimate_low?`${l.estimate_currency} ${fmt(l.estimate_low)}–${fmt(l.estimate_high)}`:'—';
-      let px='—',cls='';
+      let est='—',estSub='';
+      if(l.estimate_low){
+        const native=`${l.estimate_currency} ${fmt(l.estimate_low)}–${fmt(l.estimate_high)}`;
+        if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.estimate_low_usd!=null&&l.estimate_high_usd!=null){
+          est=`USD ${fmt(l.estimate_low_usd)}–${fmt(l.estimate_high_usd)}`; // 每日 build 時以最新匯率換算
+          estSub=native;
+        }else est=native;
+      }
+      let px='—',cls='',pxSub='';
       if(l.current_bid!=null){px=`USD ${fmt(l.current_bid)}`;cls='mono';}
-      else if(l.sold_price!=null){px=`${l.estimate_currency} ${fmt(l.sold_price)}`;cls='mono sold';}
+      else if(l.sold_price!=null){
+        const native=`${l.estimate_currency} ${fmt(l.sold_price)}`;
+        if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.sold_usd!=null){px=`USD ${fmt(l.sold_usd)}`;pxSub=native;}
+        else px=native;
+        cls='mono sold';
+      }
       const mr=l.arb_margin_pct!=null?`<span class="${l.arb_margin_pct>0?'margin-pos':''}">${l.arb_margin_pct}</span>`:'—';
       const fvSrc=l.fair_value_source?`<div class="sub">${l.fair_value_source}${l.c24_count?` · ${l.c24_count}掛牌`:''}</div>`:'';
       const fv=l.fair_value_usd!=null?`${fmt(l.fair_value_usd)}${fvSrc}`:'—';
@@ -236,16 +253,16 @@ function render(){
       const thumb=l.image_url
         ?`<a href="${l.source_url}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${imgUrl(l,240)}" data-large="${imgUrl(l,800)}" alt="" onerror="this.style.display='none'"></a>`
         :'<div class="thumb thumb-empty"></div>';
-      html+=`<div class="lot ${l.is_new?'newlot':''}">
+      html+=`<div class="lot st-${l.status}${l.is_new?' newlot':''}">
         <div class="cell c-img">${thumb}</div>
         <div class="cell c-status">${statusChip(l)}</div>
         <div class="cell c-title title-cell"><a href="${l.source_url}" target="_blank" rel="noopener">${l.title_raw||''}</a>${rev}
           <div class="sub m-lot">Lot ${l.lot_number||'—'}</div></div>
-        <div class="cell c-platform">${l.platform}<div class="sub">${l.auction_name||''}</div></div>
+        <div class="cell c-platform">${l.platform}${l.auction_name&&l.auction_name!==l.platform?`<div class="sub">${l.auction_name}</div>`:''}</div>
         <div class="cell c-date"><span class="lbl">日期</span><span class="val mono">${l.auction_date||'—'}</span></div>
-        <div class="cell c-est num"><span class="lbl">估價</span><span class="val mono">${est}</span></div>
+        <div class="cell c-est num"><span class="lbl">估價</span><span class="val mono">${est}${estSub?`<span class="val-sub">${estSub}</span>`:''}</span></div>
         <div class="cell c-usd num"><span class="lbl">USD</span><span class="val mono">${fmt(l.estimate_low_usd)}</span></div>
-        <div class="cell c-price num"><span class="lbl">${l.status==='past'?'成交價':'現價'}</span><span class="val ${cls}">${px}</span></div>
+        <div class="cell c-price num"><span class="lbl">${l.status==='past'?'成交價':'現價'}</span><span class="val ${cls}">${px}${pxSub?`<span class="val-sub">${pxSub}</span>`:''}</span></div>
         <div class="cell c-fv num"><span class="lbl">公允 USD</span><span class="val mono">${fv}</span></div>
         <div class="cell c-margin num"><span class="lbl">毛利%</span><span class="val mono">${mr}</span></div>
       </div>`;
