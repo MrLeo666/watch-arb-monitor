@@ -10,6 +10,7 @@ GitHub Actions(每日 06:00 HKT cron)
   └─ build.py
        ├─ adapters/phillips.py    ← 已實地驗證:自動發現 08 系列鐘錶專場,解析頁內 lot tiles
        ├─ adapters/loupethis.py   ← 已實地驗證:公開 JSON API,含實時出價與 10% 買家佣金
+       ├─ adapters/crott.py       ← Auktionen Dr. Crott (uhren-muser.de):公開 JSON,估價推斷為 EUR
        ├─ 匯率正規化(open.er-api.com,免費)→ USD / HKD
        ├─ 套利評分(landed cost vs 公允價;香港進口稅 0%)
        ├─ 變更偵測(新標的 is_new)→ Telegram 通知(可選)
@@ -62,7 +63,7 @@ cd docs && python -m http.server 8000   # 瀏覽 http://localhost:8000
 | Phase 3a | 內部比價引擎(comps.py):以自家成交檔案(docs/archive.json,每日自動累積、永久保存)推算公允價與毛利;含離散度與合理性雙重守衛防錯配 | ✅ 已上線 |
 | Phase 3b | Chrono24 參考編號定價(c24.py):同 ref 最低要價×0.85 作保守出貨淨得,7 天緩存,優先於 comps | ✅ 已上線 |
 | Phase 3c | WatchCharts 接入、賣出情境比較 | 🔜 |
-| Phase 4 | Watch Collecting(Algolia SSR,實時出價)+ Monaco Legend(自動發現場次,CHF/EUR 估價)+ Allu(日本 Valuence 拍賣,JPY 估價;出價需會員資格,僅作行情參照) | ✅ 已驗證 |
+| Phase 4 | Watch Collecting(Algolia SSR,實時出價)+ Monaco Legend(自動發現場次,CHF/EUR 估價)+ Allu(日本 Valuence 拍賣,JPY 估價;出價需會員資格,僅作行情參照)+ Dr. Crott(uhren-muser.de JSON,估價推斷 EUR,無佣金欄位則不填) | ✅ 已驗證 |
 
 ## 已知限制(誠實聲明)
 
@@ -85,6 +86,7 @@ adapters/antiquorum.py  # Antiquorum adapter(已驗證,自動發現場次)
 adapters/watchcollecting.py  # Watch Collecting adapter(已驗證,Algolia SSR 實時出價)
 adapters/monacolegend.py     # Monaco Legend adapter(已驗證,自動發現場次)
 adapters/allu.py        # Allu adapter(已驗證,日本 Valuence 拍賣,JPY)
+adapters/crott.py       # Dr. Crott adapter(uhren-muser.de JSON; currency inferred EUR)
 build.py                # 主程式:抓取→匯率→評分→變更偵測→通知→輸出
 comps.py                # 內部比價引擎:以 archive.json 成交檔案推算公允價
 c24.py                  # Chrono24 參考編號定價(7 天緩存)
