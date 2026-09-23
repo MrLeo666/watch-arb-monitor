@@ -4,6 +4,7 @@
 # adjustment; requires >=2 comps; matches on model tokens after stripping noise.
 import re
 from statistics import median
+from adapters.item_filter import exclusion_reason
 
 STOP = {
     "a", "an", "the", "and", "with", "for", "of", "in", "ref", "reference",
@@ -33,6 +34,8 @@ def build_index(lots):
     """Index past lots with realized USD prices by brand."""
     idx = {}
     for l in lots:
+        if exclusion_reason(l.get("title_raw")):
+            continue
         if l.get("status") != "past" or not l.get("sold_usd"):
             continue
         idx.setdefault(l["brand"], []).append((tokens(l["title_raw"], l["brand"]), l["sold_usd"]))

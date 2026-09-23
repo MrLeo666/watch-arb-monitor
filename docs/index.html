@@ -127,6 +127,12 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;paddin
   footer{padding:14px 16px;font-size:11px;line-height:1.6}
 }
 @media (prefers-reduced-motion: reduce){.chip.live::before{animation:none}}
+.decision{max-width:1400px;margin:20px auto 0;padding:18px 22px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.decision p{margin-top:8px}.decision a{color:var(--gold)}#health{margin-top:12px;overflow-wrap:anywhere}summary{cursor:pointer}
+button{background:var(--panel2);color:var(--gold);border:1px solid var(--gold-dim);border-radius:7px;padding:7px 10px;cursor:pointer;font:inherit}button:focus-visible{outline:2px solid var(--gold)}
+.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.actions button{font-size:12px}
+dialog{margin:auto;background:var(--panel);color:var(--text);border:1px solid var(--gold-dim);border-radius:14px;padding:22px;width:min(620px,94vw);max-height:90vh;overflow:auto}dialog::backdrop{background:#000b}dialog h2{margin:14px 0}#quoteFields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}#quoteFields label{display:grid;gap:6px;font-size:12px}#quoteFields input{width:100%;min-width:0;background:var(--ink);color:var(--text);padding:10px;border:1px solid var(--line);border-radius:6px;font-size:16px}#quoteResult{margin-top:18px;line-height:1.8}
+@media(max-width:760px){.decision{margin:14px;padding:14px}.cell.c-date .val{white-space:normal}.controls{position:static}.controls select{flex:1 1 28%;min-width:90px}}
 </style>
 </head>
 <body>
@@ -149,30 +155,35 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;paddin
       <option value="past">過往成交(參考價)</option>
       <option value="">全部</option>
     </select>
+    <label class="toggle"><input type="checkbox" id="favoritesOnly">只看收藏</label>
     <label class="toggle"><input type="checkbox" id="newOnly">只看新標的</label>
     <label class="toggle"><input type="checkbox" id="flagOnly">只看套利標記</label>
     <span class="stats" id="stats"></span>
   </div>
 </div>
 
+<section class="decision" aria-label="決策概覽"><div id="overview"></div><details id="health"></details><p id="privacyNotice" class="sub" role="status"></p></section>
 <main id="main"></main>
+<dialog id="quoteDialog" aria-labelledby="quoteTitle"><button id="quoteClose" type="button">關閉</button><h2 id="quoteTitle"></h2><p id="quoteContext" class="sub"></p><form id="quoteForm"><div id="quoteFields"></div><button type="submit">計算並儲存於本機</button></form><p id="quoteResult" role="status"></p></dialog>
 
 <footer>
   買家佣金、稅費依各場 Conditions of Sale 為準。公允價兩種來源:C24(n)=Chrono24 同參考編號最低要價×0.85(保守經銷出貨淨得,n=掛牌數);comps(n)=內部成交檔案中位數。均未經品相調整,僅供初篩;毛利為估算。私人研究用途。
 </footer>
 
+<script src="decision.js"></script>
 <script>
-let LOTS=[];
+let LOTS=[], META=null;
 const $=id=>document.getElementById(id);
 const fmt=(n)=>n==null?'—':Number(n).toLocaleString('en-US',{maximumFractionDigits:0});
 
 async function load(){
   try{
     const [lots,meta]=await Promise.all([
-      fetch('lots.json?_='+Date.now()).then(r=>r.json()),
+      fetch('lots.json?_='+Date.now()).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}),
       fetch('meta.json?_='+Date.now()).then(r=>r.json()).catch(()=>null)
     ]);
-    LOTS=lots;
+    if (!Array.isArray(lots)) throw new Error("Invalid lots");
+    LOTS=lots; META=meta;
     if(meta&&meta.updated_at) $('updated').textContent='更新於 '+meta.updated_at.slice(0,16).replace('T',' ')+' UTC';
     const bs=[...new Set(LOTS.map(l=>l.brand))].sort();
     const ps=[...new Set(LOTS.map(l=>l.platform))].sort();
@@ -197,6 +208,7 @@ function statusChip(l){
 }
 
 function render(){
+  renderOverview(META);
   const q=$('q').value.trim().toLowerCase();
   const rows=LOTS.filter(l=>{
     if($('brand').value&&l.brand!==$('brand').value)return false;
@@ -205,8 +217,9 @@ function render(){
     if(st==='active'&&l.status==='past')return false;
     if(st==='live'&&l.status!=='live')return false;
     if(st==='past'&&l.status!=='past')return false;
+    if($('favoritesOnly').checked&&!privateState.favorites.includes(l.lot_id))return false;
     if($('newOnly').checked&&!l.is_new)return false;
-    if($('flagOnly').checked&&!l.arb_flag)return false;
+    if($('flagOnly').checked&&(!l.arb_flag||!actionable(l)))return false;
     if(q&&!((l.title_raw||'')+' '+(l.auction_name||'')).toLowerCase().includes(q))return false;
     return true;
   });
@@ -220,7 +233,7 @@ function render(){
   let html='';
   for(const b of order){
     const g=groups[b].sort((x,y)=>(x.status==='past')-(y.status==='past')||(x.auction_date||'').localeCompare(y.auction_date||''));
-    html+=`<div class="brand-head"><h2>${b}</h2><span class="n">${g.length} 件</span></div>
+    html+=`<div class="brand-head"><h2>${esc(b)}</h2><span class="n">${g.length} 件</span></div>
     <div class="tbl"><div class="thead"><div class="trow">
       <div class="cell c-img">圖</div>
       <div class="cell c-status">狀態</div><div class="cell c-title">拍品</div><div class="cell c-platform">平台 / 場次</div>
@@ -231,7 +244,7 @@ function render(){
     for(const l of g){
       let est='—',estSub='';
       if(l.estimate_low){
-        const native=`${l.estimate_currency} ${fmt(l.estimate_low)}–${fmt(l.estimate_high)}`;
+        const native=`${esc(l.estimate_currency)} ${fmt(l.estimate_low)}–${fmt(l.estimate_high)}`;
         if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.estimate_low_usd!=null&&l.estimate_high_usd!=null){
           est=`USD ${fmt(l.estimate_low_usd)}–${fmt(l.estimate_high_usd)}`; // 每日 build 時以最新匯率換算
           estSub=native;
@@ -239,31 +252,32 @@ function render(){
       }
       let px='—',cls='',pxSub='';
       if(l.current_bid!=null){
-        const native=`${l.estimate_currency||'幣種未提供'} ${fmt(l.current_bid)}`;
+        const native=`${esc(l.estimate_currency||'幣種未提供')} ${fmt(l.current_bid)}`;
         if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.current_bid_usd!=null){px=`USD ${fmt(l.current_bid_usd)}`;pxSub=native;}
         else px=native;
         cls='mono';
       }
       else if(l.sold_price!=null){
-        const native=`${l.estimate_currency} ${fmt(l.sold_price)}`;
+        const native=`${esc(l.estimate_currency)} ${fmt(l.sold_price)}`;
         if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.sold_usd!=null){px=`USD ${fmt(l.sold_usd)}`;pxSub=native;}
         else px=native;
         cls='mono sold';
       }
-      const mr=l.arb_margin_pct!=null?`<span class="${l.arb_margin_pct>0?'margin-pos':''}">${l.arb_margin_pct}</span>`:'—';
-      const fvSrc=l.fair_value_source?`<div class="sub">${l.fair_value_source}${l.c24_count?` · ${l.c24_count}掛牌`:''}</div>`:'';
+      const mr=actionable(l)&&l.arb_margin_pct!=null?`<span class="${l.arb_margin_pct>0?'margin-pos':''}">${l.arb_margin_pct}</span>`:'—';
+      const fvSrc=l.fair_value_source?`<div class="sub">${esc(l.fair_value_source)}${l.c24_count?` · ${l.c24_count}掛牌`:''}</div>`:'';
       const fv=l.fair_value_usd!=null?`${fmt(l.fair_value_usd)}${fvSrc}`:'—';
       const rev=l.manual_review?' <span class="chip review">須人工核對</span>':'';
       const thumb=l.image_url
-        ?`<a href="${l.source_url}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${imgUrl(l,240)}" data-large="${imgUrl(l,800)}" alt="" onerror="this.style.display='none'"></a>`
+        ?`<a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${safeUrl(imgUrl(l,240))}" data-large="${safeUrl(imgUrl(l,800))}" alt="" onerror="this.style.display='none'"></a>`
         :'<div class="thumb thumb-empty"></div>';
-      html+=`<div class="lot st-${l.status}${l.is_new?' newlot':''}">
+      html+=`<div class="lot st-${['live','past','upcoming'].includes(l.status)?l.status:'upcoming'}${l.is_new?' newlot':''}">
         <div class="cell c-img">${thumb}</div>
-        <div class="cell c-status">${statusChip(l)}</div>
-        <div class="cell c-title title-cell"><a href="${l.source_url}" target="_blank" rel="noopener">${l.title_raw||''}</a>${rev}
-          <div class="sub m-lot">Lot ${l.lot_number||'—'}</div></div>
-        <div class="cell c-platform">${l.platform}${l.auction_name&&l.auction_name!==l.platform?`<div class="sub">${l.auction_name}</div>`:''}</div>
-        <div class="cell c-date"><span class="lbl">日期</span><span class="val mono">${l.auction_date||'—'}</span></div>
+        <div class="cell c-status">${statusChip(l)}<div class="sub">${isFresh(l)?'30 分鐘內核驗':'價格待刷新'}</div></div>
+        <div class="cell c-title title-cell"><a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener">${esc(l.title_raw||'')}</a>${rev}
+          <div class="sub m-lot">Lot ${esc(l.lot_number||'—')}</div>
+          <div class="actions"><button data-action="favorite" data-lot="${esc(l.lot_id)}" aria-pressed="${privateState.favorites.includes(l.lot_id)}">${privateState.favorites.includes(l.lot_id)?'★ 已收藏':'☆ 收藏'}</button><button data-action="quote" data-lot="${esc(l.lot_id)}">報價試算</button></div></div>
+        <div class="cell c-platform">${esc(l.platform)}${l.auction_name&&l.auction_name!==l.platform?`<div class="sub">${esc(l.auction_name)}</div>`:''}</div>
+        <div class="cell c-date"><span class="lbl">日期</span><span class="val mono">${timing(l)}</span></div>
         <div class="cell c-est num"><span class="lbl">估價</span><span class="val mono">${est}${estSub?`<span class="val-sub">${estSub}</span>`:''}</span></div>
         <div class="cell c-price num"><span class="lbl">${l.status==='past'?'成交價':'現價'}</span><span class="val ${cls}">${px}${pxSub?`<span class="val-sub">${pxSub}</span>`:''}</span></div>
         <div class="cell c-fv num"><span class="lbl">公允 USD</span><span class="val mono">${fv}</span></div>
@@ -275,7 +289,8 @@ function render(){
   $('main').innerHTML=html||'<div class="empty">沒有符合條件的拍品。</div>';
 }
 
-['q','brand','platform','status','newOnly','flagOnly'].forEach(id=>$(id).addEventListener('input',render));
+['q','brand','platform','status','newOnly','flagOnly','favoritesOnly'].forEach(id=>$(id).addEventListener('input',render));
+setupDecision();
 load();
 
 // hover zoom preview (desktop only)

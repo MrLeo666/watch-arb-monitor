@@ -7,7 +7,7 @@ import json
 import re
 import time
 import requests
-from .base import Lot, match_brand, MANUAL_REVIEW_BRANDS
+from .base import normalize_end, Lot, match_brand, MANUAL_REVIEW_BRANDS
 
 BASE = "https://watchcollecting.com/auctions"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -78,6 +78,7 @@ def run():
                     source_url=f"https://watchcollecting.com/for-sale/{hit.get('slug') or hid}",
                     auction_name=hit.get("collectionTitle") or "Watch Collecting",
                     auction_date=(hit.get("dtStageEndsUTC") or "")[:10],
+                    ends_at=normalize_end(hit.get("dtStageEndsUTC"), assume_utc=True),
                     brand=brand, brand_matched_keyword=kw, title_raw=title[:160],
                     estimate_currency=cur,
                     current_bid=hit.get("currentBid") if status == "live" else None,

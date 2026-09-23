@@ -2,7 +2,7 @@
 # Each "auction" is one lot on a rolling 7-day timed sale. USD, cents. BP field included.
 # High buy-side value: live current bid lets us compute real-time margin vs fair value.
 import requests
-from .base import Lot, match_brand, MANUAL_REVIEW_BRANDS
+from .base import normalize_end, Lot, match_brand, MANUAL_REVIEW_BRANDS
 
 API = "https://api.loupethis.com/api/v1/auctions"
 HEADERS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
@@ -32,6 +32,7 @@ def run():
                 source_url=f"https://loupethis.com/auctions/{a.get('slug','')}",
                 auction_name="Loupe This rolling sale",
                 auction_date=(a.get("ends_at") or "")[:10],
+                ends_at=normalize_end(a.get("ends_at")),
                 lot_number=str(a.get("lot", "")),
                 brand=brand, brand_matched_keyword=kw, title_raw=title,
                 estimate_currency="USD",

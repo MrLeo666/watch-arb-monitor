@@ -1,6 +1,8 @@
 # build.py — orchestrate adapters, normalize FX, score arbitrage, detect new lots, notify.
 import json
 import os
+import io
+from contextlib import redirect_stdout
 from datetime import datetime, timezone
 
 import requests
@@ -9,6 +11,7 @@ from adapters import phillips, loupethis, bezel, antiquorum, watchcollecting, mo
 import comps
 import c24
 from adapters.base import Lot  # noqa: F401
+from adapters.item_filter import exclusion_reason
 
 OUT_PATH = "docs/lots.json"
 ARCHIVE_PATH = "docs/archive.json"
@@ -113,19 +116,39 @@ def main():
     to_usd, usd_hkd = get_fx()
 
     raw = []
+    source_health = []
     for mod in (phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend, allu, crott):
+        log = io.StringIO()
+        records = []
+        state = "returned"
         try:
-            raw += mod.run()
+            with redirect_stdout(log):
+                records = mod.run()
+            # Existing adapters can swallow failures: a return is not proof of completeness.
+            if not records:
+                state = "empty_or_failed"
+            elif any(word in log.getvalue().lower() for word in ("failed", "error", "crashed")):
+                state = "partial_or_failed"
         except Exception as e:
+            state = "failed"
             print(f"[{mod.__name__}] adapter crashed: {e}")
+        print(log.getvalue(), end="")
+        raw += records
+        source_health.append({"source": mod.__name__.split(".")[-1],
+                              "state": state, "count": len(records),
+                              "checked_at": datetime.now(timezone.utc).isoformat()})
 
     if not raw:
         raise RuntimeError("All adapters returned no lots; preserving existing data")
 
     now = datetime.now(timezone.utc).isoformat()
     out, new_lots = [], []
+    excluded_non_watch = 0
     for lot_obj in raw:
         lot = lot_obj.dict()
+        if exclusion_reason(lot.get("title_raw")):
+            excluded_non_watch += 1
+            continue
         lot = enrich_fair_value(lot)
         lot = score(lot, to_usd, usd_hkd)
         old = prev.get(lot["lot_id"])
@@ -192,7 +215,8 @@ def main():
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
     with open(META_PATH, "w", encoding="utf-8") as f:
-        json.dump({"updated_at": now,
+        json.dump({"updated_at": now, "sources": source_health,
+                   "filter": {"excluded_non_watch": excluded_non_watch, "rule": "standalone-accessories-v1"},
                    "counts": {"total": len(out),
                               "new": len(new_lots),
                               "active": sum(1 for l in out if l["status"] != "past")}},

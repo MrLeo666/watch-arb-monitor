@@ -4,7 +4,7 @@
 import json
 import re
 import requests
-from .base import Lot, match_brand, MANUAL_REVIEW_BRANDS
+from .base import normalize_end, Lot, match_brand, MANUAL_REVIEW_BRANDS
 
 URL = "https://shop.getbezel.com/auctions"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -44,6 +44,7 @@ def run():
             source_url=f"https://shop.getbezel.com/listings/{r.get('id')}",
             auction_name="Bezel Auctions",
             auction_date=(info.get("endDate") or "")[:10],
+            ends_at=normalize_end(info.get("endDate")),
             brand=brand, brand_matched_keyword=kw, title_raw=title,
             estimate_currency="USD",
             current_bid=(bid_c / 100.0) if bid_c else None,

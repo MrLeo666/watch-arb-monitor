@@ -13,6 +13,7 @@ class Lot:
     source_url: str
     auction_name: str = ""
     auction_date: str = ""       # ISO 8601 (end date for timed sales)
+    ends_at: str = ""           # timezone-aware lot closing time, never sale-level date
     lot_number: str = ""
     brand: str = ""
     brand_matched_keyword: str = ""
@@ -95,3 +96,18 @@ def match_brand(title: str):
             elif kw in t:
                 return brand, kw
     return None, None
+
+
+def normalize_end(value, assume_utc=False):
+    """Accept exact timestamps only; date-only/ambiguous values stay unknown."""
+    if not isinstance(value, str) or "T" not in value:
+        return ""
+    try:
+        dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            if not assume_utc:
+                return ""
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc).isoformat()
+    except ValueError:
+        return ""
