@@ -38,8 +38,15 @@ FX_COST = 0.015           # payment/FX friction
 ARB_THRESHOLD = 0.25      # flag when expected margin >= 25%
 
 def score(lot: dict, to_usd, usd_hkd):
-    cur = lot.get("estimate_currency") or "USD"
-    rate = to_usd.get(cur, 1.0)
+    cur = (lot.get("estimate_currency") or "").strip().upper()
+    rate = to_usd.get(cur)
+    # Re-scoring must not retain stale conversions or opportunity flags.
+    for key in ("estimate_low_usd", "estimate_high_usd", "estimate_low_hkd",
+                "sold_usd", "current_bid_usd", "arb_margin_pct"):
+        lot[key] = None
+    lot["arb_flag"] = False
+    if rate is None or rate <= 0:
+        return lot
     for k_src, k_dst in (("estimate_low", "estimate_low_usd"),
                          ("estimate_high", "estimate_high_usd")):
         v = lot.get(k_src)
@@ -54,10 +61,12 @@ def score(lot: dict, to_usd, usd_hkd):
     bid = lot.get("current_bid")
     basis = (bid * rate) if bid is not None else lot.get("estimate_low_usd")
     fv = lot.get("fair_value_usd")
-    if fv and basis:
-        bp = (lot.get("buyers_premium_pct") or BUYER_PREMIUM_DEFAULT * 100) / 100.0
+    if lot.get("status") != "past" and fv and fv > 0 and basis and basis > 0:
+        premium = lot.get("buyers_premium_pct")
+        bp = (BUYER_PREMIUM_DEFAULT * 100 if premium is None else premium) / 100.0
         landed = basis * (1 + bp + SHIP_INSURE + FX_COST)  # HK import duty = 0%
-        net_proceeds = fv * (1 - SELLER_COST)
+        # C24 values already represent net dealer proceeds (ask * 0.85).
+        net_proceeds = fv if lot.get("fair_value_source", "").startswith("C24(") else fv * (1 - SELLER_COST)
         margin = (net_proceeds - landed) / landed
         lot["arb_margin_pct"] = round(margin * 100, 1)
         lot["arb_flag"] = margin >= ARB_THRESHOLD
@@ -90,7 +99,7 @@ def notify(lots):
         est = ""
         if l.get("estimate_low"):
             est = f"估價 {l['estimate_currency']} {l['estimate_low']:,.0f}–{l['estimate_high'] or 0:,.0f}\n"
-        bid = f"現時出價 USD {l['current_bid']:,.0f}\n" if l.get("current_bid") else ""
+        bid = f"現時出價 {l.get('estimate_currency') or '幣種未提供'} {l['current_bid']:,.0f}\n" if l.get("current_bid") is not None else ""
         msg = (f"🆕 {l['brand']} @ {l['platform']}\n{l['title_raw']}\n{est}{bid}"
                f"結標 {l.get('auction_date','')}\n{l['source_url']}")
         try:
@@ -109,6 +118,9 @@ def main():
             raw += mod.run()
         except Exception as e:
             print(f"[{mod.__name__}] adapter crashed: {e}")
+
+    if not raw:
+        raise RuntimeError("All adapters returned no lots; preserving existing data")
 
     now = datetime.now(timezone.utc).isoformat()
     out, new_lots = [], []

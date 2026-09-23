@@ -48,12 +48,21 @@ GitHub Pages(docs/)
 ## 本地測試
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
+python -m unittest discover -s tests -v  # 離線回歸測試，不抓取或發通知
+node tests/test_dashboard.cjs  # 出價幣種、資料渲染與篩選檢查
 python build.py          # 產生 docs/lots.json
 cd docs && python -m http.server 8000   # 瀏覽 http://localhost:8000
 ```
 
 ## 目前覆蓋與路線圖
+
+評分口徑：0% 買家佣金按零計算，只有缺失值才使用預設 25%；未知幣種不換算、不產生套利訊號。
+一般公允價扣除 12% 賣方成本；Chrono24 掛牌價 × 0.85 已是模型淨回款，不再重複扣除。
+已結束拍品保留成交換算，但不列為套利機會。以上均為模型假設，並非可成交報價。
+當所有抓取結果均為空時，更新會失敗並保留現有資料；部分平台缺失仍需人工核查。
 
 | 階段 | 內容 | 狀態 |
 |---|---|---|

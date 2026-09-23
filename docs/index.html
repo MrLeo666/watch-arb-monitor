@@ -238,7 +238,12 @@ function render(){
         }else est=native;
       }
       let px='—',cls='',pxSub='';
-      if(l.current_bid!=null){px=`USD ${fmt(l.current_bid)}`;cls='mono';}
+      if(l.current_bid!=null){
+        const native=`${l.estimate_currency||'幣種未提供'} ${fmt(l.current_bid)}`;
+        if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.current_bid_usd!=null){px=`USD ${fmt(l.current_bid_usd)}`;pxSub=native;}
+        else px=native;
+        cls='mono';
+      }
       else if(l.sold_price!=null){
         const native=`${l.estimate_currency} ${fmt(l.sold_price)}`;
         if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.sold_usd!=null){px=`USD ${fmt(l.sold_usd)}`;pxSub=native;}
