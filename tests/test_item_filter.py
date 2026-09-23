@@ -10,6 +10,10 @@ class ItemFilterTests(unittest.TestCase):
             'PATEK PHILIPPE, SET OF TWO ACCESSORIES FOR REF. 5004',
             'F.P. JOURNE, PRESENTATION BOX, WOOD',
             'F.P. JOURNE, HOROLOGICAL BOOK',
+            'Patek Philippe Smooth Grain Leather Backpack Dark Brown',
+            'Cartier leather handbag',
+            'Patek Philippe travel bag',
+            'Cartier wallet',
             'PATEK PHILIPPE, CALATRAVA-STYLE DEPLOYANT CLASP',
             'PATEK PHILIPPE, SILVER DIAL WITH YELLOW GOLD INDEXES',
             'Patek Philippe leather strap',
@@ -29,6 +33,7 @@ class ItemFilterTests(unittest.TestCase):
             'Cartier wristwatch with presentation box',
             'Cartier wristwatch, presentation box and certificate',
             'Cartier Tank with box and papers',
+            'Cartier wristwatch with travel bag',
             'A.LANGE & SÖHNE, HUNTING CASE POCKET WATCH, 18K YELLOW GOLD',
             '2014 MB&F SIDEWINDER - HOROLOGICAL MACHINE No.3',
         ):

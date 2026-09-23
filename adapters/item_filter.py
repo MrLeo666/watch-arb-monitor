@@ -10,6 +10,7 @@ _ACCESSORY = re.compile(
     r'\b(?:accessor(?:y|ies)|presentation\s+box(?:es)?|(?:wrist)?watch\s+box(?:es)?|'
     r'watch\s+wind(?:er|ing)|horological\s+(?:book|tools?)|push\s+pins?|'
     r'vip\s+gifts?|exclusive\s+gifts?|vide[- ]poche|cardholder|display\s+stands?|'
+    r'backpacks?|rucksacks?|handbags?|(?:tote|duffel|travel|shoulder)\s+bags?|luggage|wallets?|'
     r'deployant\s+clasp|(?:table|desk|wall|travel)\s+clock)\b', re.I)
 _WATCH = re.compile(
     r'\b(?:wristwatch|wristwatc|pocket\s+watch|chronograph|chronometer|'
