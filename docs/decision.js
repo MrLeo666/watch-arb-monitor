@@ -19,7 +19,7 @@ function endTime(l) {
 }
 function actionable(l) {
   const end = endTime(l);
-  return l.status !== 'past' && isFresh(l) && !(Number.isFinite(end) && end <= Date.now());
+  return l.scoring_enabled !== false && l.status !== 'past' && isFresh(l) && !(Number.isFinite(end) && end <= Date.now());
 }
 function timing(l) {
   const end = endTime(l);
@@ -41,7 +41,7 @@ function renderOverview(meta) {
   $('overview').innerHTML = `<b>決策清單</b> · 收藏 ${favorites.length} 件 · 24 小時內結標 ${soon.length} 件 · 待刷新 ${old} 件
     <p class="sub">價格超過 30 分鐘即停用套利提示；目前仍為每日抓取。收藏與報價只存於此瀏覽器，不跨裝置同步。</p>
     ${soon.map(l=>`<p>${esc(l.title_raw)} · ${timing(l)} · <a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener">核對官方出價</a></p>`).join('')}`;
-  const states = {returned:'已返回資料，完整性未驗證',empty_or_failed:'無資料或抓取失敗',partial_or_failed:'可能不完整',failed:'抓取失敗'};
+  const states = {no_matches:'已檢查目錄，未篩出目標拍品',returned:'已返回資料，完整性未驗證',empty_or_failed:'無資料或抓取失敗',partial_or_failed:'可能不完整',failed:'抓取失敗'};
   $('health').innerHTML = '<summary>平台資料狀態</summary>' + (meta?.sources?.length ? meta.sources.map(s=>`<p>${esc(s.source)} · ${esc(states[s.state] || '未知')} · ${Number(s.count)||0} 件 · ${esc(s.checked_at)}</p>`).join('') : '<p>此批資料尚無平台健康記錄；下次抓取後產生。不能將缺少資料視為沒有拍品。</p>');
 }
 function openQuote(id) {

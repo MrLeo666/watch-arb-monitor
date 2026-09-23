@@ -119,3 +119,9 @@ requirements.txt
 測試：`python -m unittest discover -s tests -v` 及 `node tests/test_dashboard.cjs`。
 
 周邊過濾：抓取後排除標題可明確識別的獨立表盒、上鏈盒、書籍、配件、禮品和座鐘；完整手表附盒、證書、表帶不因附件關鍵字被排除。模糊標題保留，懷表保留。歷史檔案原件不刪除，但比價引擎跳過周邊記錄。
+
+## 新市場試接（已納入每日抓取）
+
+Sotheby's / Bonhams 的公開目錄試接結果見 [研究記錄](research/MARKET_PILOT.md)。
+`.venv/bin/python scripts/market_pilot.py` 產生獨立小樣與本地預覽，不改正式資料、不發通知。
+GitHub Actions 已設置 `EXPERIMENTAL_MARKETS=1`，每日加入這兩個來源；Sotheby's 已支援官方公開目錄逐頁抓取與總數校驗，試接拍品不參與套利評分及公允價推算。

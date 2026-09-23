@@ -1,9 +1,9 @@
 name: tests
 on:
   push:
-    paths: ['**.py', 'tests/**', 'docs/index.html', 'docs/decision.js', 'requirements.txt', '.github/workflows/tests.yml']
+    paths: ['**.py', 'adapters/*.graphql', 'tests/**', 'docs/index.html', 'docs/decision.js', 'requirements.txt', '.github/workflows/tests.yml']
   pull_request:
-    paths: ['**.py', 'tests/**', 'docs/index.html', 'docs/decision.js', 'requirements.txt', '.github/workflows/tests.yml']
+    paths: ['**.py', 'adapters/*.graphql', 'tests/**', 'docs/index.html', 'docs/decision.js', 'requirements.txt', '.github/workflows/tests.yml']
 permissions:
   contents: read
 jobs:

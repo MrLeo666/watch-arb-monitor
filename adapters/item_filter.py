@@ -8,12 +8,12 @@ import re
 # Catalogues commonly separate the object heading and description by 2+ spaces.
 _ACCESSORY = re.compile(
     r'\b(?:accessor(?:y|ies)|presentation\s+box(?:es)?|(?:wrist)?watch\s+box(?:es)?|'
-    r'watch\s+wind(?:er|ing)|horological\s+(?:book|tools?)|push\s+pins?|'
+    r'(?:electronic\s+)?winding\s+box|watch\s+wind(?:er|ing)|horological\s+(?:book|tools?)|push\s+pins?|'
     r'vip\s+gifts?|exclusive\s+gifts?|vide[- ]poche|cardholder|display\s+stands?|'
     r'backpacks?|rucksacks?|handbags?|(?:tote|duffel|travel|shoulder)\s+bags?|luggage|wallets?|'
     r'deployant\s+clasp|(?:table|desk|wall|travel)\s+clock)\b', re.I)
 _WATCH = re.compile(
-    r'\b(?:wristwatch|wristwatc|pocket\s+watch|chronograph|chronometer|'
+    r'\b(?:montre|montres|wristwatch|wristwatc|pocket\s+watch|chronograph|chronometer|'
     r'automatic|quartz|manual[ -]wind(?:ing)?|perpetual\s+calendar)\b', re.I)
 _GENERIC = re.compile(r'\b(?:box(?:es)?|straps?|bracelets?|buckles?|clasps?|'
                       r'certificates?|papers|catalogues?|books?|pouches|dials?|'

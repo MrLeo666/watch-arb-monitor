@@ -1,0 +1,125 @@
+{
+  "auction": {
+    "sSaleName": "Weekly: Watches"
+  },
+  "records": [
+    {
+      "id": "31990-13",
+      "auctionId": "31990",
+      "lotNo": {
+        "full": "13",
+        "letter": "",
+        "number": 13
+      },
+      "slug": "cartier-a-gold-plated-silver-quartz-wristwatch-tank-must-de-ref-1613-circa-1990",
+      "title": "Cartier. A gold plated silver quartz wristwatch Tank, Must de, Ref: 1613, Circa 1990",
+      "status": "SOLD",
+      "flags": {
+        "hasConditionReport": true,
+        "isAmended": false,
+        "isAuctionEnded": true,
+        "isCites": false,
+        "isExhibition": false,
+        "isPreview": false,
+        "isReferToDepartment": false,
+        "isResultPublished": true,
+        "isStarLot": false,
+        "isTaLot": false,
+        "isToBeSold": false,
+        "isWithoutReserve": false
+      },
+      "auctionStatus": "FINISHED",
+      "auctionEndDate": {
+        "datetime": "2026-06-03T11:00:00+00:00",
+        "timestamp": 1780484400,
+        "timezone": {
+          "abbreviation": "UTC",
+          "iana": "UTC"
+        }
+      },
+      "price": {
+        "GBPHighEstimate": 1100,
+        "GBPLowEstimate": 1100,
+        "currencySymbol": "&#163;",
+        "estimateHigh": 700,
+        "estimateLow": 500,
+        "hammerPremium": 1408,
+        "hammerPrice": 1100,
+        "startingBidAmount": 500
+      },
+      "currency": {
+        "bonhams_code": "£",
+        "iso_code": "GBP"
+      },
+      "image": {
+        "URLParams": "",
+        "aspectRatio": "",
+        "caption": "Cartier. A gold plated silver quartz wristwatch Tank, Must de, Ref: 1613, Circa 1990",
+        "hash": "LmRMYtj]~qofoffQayj[g4fQjDaz",
+        "height": 2880,
+        "url": "https://images1.bonhams.com/image?src=Images/live/2026-05/19/25856985-6-3.jpg",
+        "use": "MAIN",
+        "width": 2880
+      }
+    },
+    {
+      "id": "31990-14",
+      "auctionId": "31990",
+      "lotNo": {
+        "full": "14",
+        "letter": "",
+        "number": 14
+      },
+      "slug": "cartier-a-ladys-stainless-steel-quartz-bracelet-watch-panthere-ref-1320-purchased-21st-july-1997",
+      "title": "Cartier. A lady's stainless steel quartz bracelet watch Panthère , Ref: 1320, Purchased 21st July 1997",
+      "status": "SOLD",
+      "flags": {
+        "hasConditionReport": true,
+        "isAmended": false,
+        "isAuctionEnded": true,
+        "isCites": false,
+        "isExhibition": false,
+        "isPreview": false,
+        "isReferToDepartment": false,
+        "isResultPublished": true,
+        "isStarLot": false,
+        "isTaLot": false,
+        "isToBeSold": false,
+        "isWithoutReserve": false
+      },
+      "auctionStatus": "FINISHED",
+      "auctionEndDate": {
+        "datetime": "2026-06-03T11:00:00+00:00",
+        "timestamp": 1780484400,
+        "timezone": {
+          "abbreviation": "UTC",
+          "iana": "UTC"
+        }
+      },
+      "price": {
+        "GBPHighEstimate": 1600,
+        "GBPLowEstimate": 1600,
+        "currencySymbol": "&#163;",
+        "estimateHigh": 2000,
+        "estimateLow": 1500,
+        "hammerPremium": 2048,
+        "hammerPrice": 1600,
+        "startingBidAmount": 1500
+      },
+      "currency": {
+        "bonhams_code": "£",
+        "iso_code": "GBP"
+      },
+      "image": {
+        "URLParams": "",
+        "aspectRatio": "",
+        "caption": "Cartier. A lady's stainless steel quartz bracelet watch Panthère , Ref: 1320, Purchased 21st July 1997",
+        "hash": "LWR{#=of~qofogfQaxj[%MayM_j[",
+        "height": 2880,
+        "url": "https://images1.bonhams.com/image?src=Images/live/2026-05/20/25871594-2-3.jpg",
+        "use": "MAIN",
+        "width": 2880
+      }
+    }
+  ]
+}

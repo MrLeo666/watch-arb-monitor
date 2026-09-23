@@ -1,0 +1,11 @@
+query PilotLots($id:String!, $offset:Int, $limit:Int) {
+ auction(id:$id, language:ENGLISH) {
+ auctionId title departmentNames currencyV2 slug {year name} dates { ... on TimedAuctionDates {startsToClose} }
+ lotCardsConnection(offset:$offset,limit:$limit,filter:ALL) {
+ totalCount hasNextPage lots {
+ lotId title creatorsDisplayTitle lotNumber {... on VisibleLotNumber {lotDisplayNumber}} slug {lotSlug}
+ estimateV2 {... on LowHighEstimateV2 {lowEstimate {amount} highEstimate {amount}}}
+ withdrawnState {state}
+ bidState {isClosed closingTime bidTypeV2 {... on TimedBidTypeV2 {timedBidPhase}} currentBidV2 {amount currency}}
+ media(imageSizes:[Small]) {images {renditions {url imageSize}}}
+ } } } }

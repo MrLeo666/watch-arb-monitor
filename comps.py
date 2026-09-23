@@ -34,7 +34,7 @@ def build_index(lots):
     """Index past lots with realized USD prices by brand."""
     idx = {}
     for l in lots:
-        if exclusion_reason(l.get("title_raw")):
+        if l.get("scoring_enabled") is False or exclusion_reason(l.get("title_raw")):
             continue
         if l.get("status") != "past" or not l.get("sold_usd"):
             continue

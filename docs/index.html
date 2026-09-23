@@ -261,11 +261,13 @@ function render(){
         const native=`${esc(l.estimate_currency)} ${fmt(l.sold_price)}`;
         if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.sold_usd!=null){px=`USD ${fmt(l.sold_usd)}`;pxSub=native;}
         else px=native;
+        if(l.sold_price_basis==='hammer') pxSub=(pxSub?pxSub+' · ':'')+'落槌價（未含佣）';
         cls='mono sold';
       }
       const mr=actionable(l)&&l.arb_margin_pct!=null?`<span class="${l.arb_margin_pct>0?'margin-pos':''}">${l.arb_margin_pct}</span>`:'—';
       const fvSrc=l.fair_value_source?`<div class="sub">${esc(l.fair_value_source)}${l.c24_count?` · ${l.c24_count}掛牌`:''}</div>`:'';
       const fv=l.fair_value_usd!=null?`${fmt(l.fair_value_usd)}${fvSrc}`:'—';
+      const pilot=l.scoring_enabled===false?' <span class="chip review">試接 · 不評分</span>':'';
       const rev=l.manual_review?' <span class="chip review">須人工核對</span>':'';
       const thumb=l.image_url
         ?`<a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${safeUrl(imgUrl(l,240))}" data-large="${safeUrl(imgUrl(l,800))}" alt="" onerror="this.style.display='none'"></a>`
@@ -273,13 +275,13 @@ function render(){
       html+=`<div class="lot st-${['live','past','upcoming'].includes(l.status)?l.status:'upcoming'}${l.is_new?' newlot':''}">
         <div class="cell c-img">${thumb}</div>
         <div class="cell c-status">${statusChip(l)}<div class="sub">${isFresh(l)?'30 分鐘內核驗':'價格待刷新'}</div></div>
-        <div class="cell c-title title-cell"><a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener">${esc(l.title_raw||'')}</a>${rev}
+        <div class="cell c-title title-cell"><a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener">${esc(l.title_raw||'')}</a>${rev}${pilot}
           <div class="sub m-lot">Lot ${esc(l.lot_number||'—')}</div>
           <div class="actions"><button data-action="favorite" data-lot="${esc(l.lot_id)}" aria-pressed="${privateState.favorites.includes(l.lot_id)}">${privateState.favorites.includes(l.lot_id)?'★ 已收藏':'☆ 收藏'}</button><button data-action="quote" data-lot="${esc(l.lot_id)}">報價試算</button></div></div>
         <div class="cell c-platform">${esc(l.platform)}${l.auction_name&&l.auction_name!==l.platform?`<div class="sub">${esc(l.auction_name)}</div>`:''}</div>
         <div class="cell c-date"><span class="lbl">日期</span><span class="val mono">${timing(l)}</span></div>
         <div class="cell c-est num"><span class="lbl">估價</span><span class="val mono">${est}${estSub?`<span class="val-sub">${estSub}</span>`:''}</span></div>
-        <div class="cell c-price num"><span class="lbl">${l.status==='past'?'成交價':'現價'}</span><span class="val ${cls}">${px}${pxSub?`<span class="val-sub">${pxSub}</span>`:''}</span></div>
+        <div class="cell c-price num"><span class="lbl">${l.status==='past'?(l.sold_price_basis==='hammer'?'落槌價':l.sold_price_basis==='all_in'?'含佣成交價':'成交價'):'現價'}</span><span class="val ${cls}">${px}${pxSub?`<span class="val-sub">${pxSub}</span>`:''}</span></div>
         <div class="cell c-fv num"><span class="lbl">公允 USD</span><span class="val mono">${fv}</span></div>
         <div class="cell c-margin num"><span class="lbl">毛利%</span><span class="val mono">${mr}</span></div>
       </div>`;

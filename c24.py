@@ -80,7 +80,7 @@ def enrich(lots: list, max_queries: int = 60):
     queries = 0
     enriched = 0
     for lot in lots:
-        if lot.get("status") == "past":
+        if lot.get("scoring_enabled") is False or lot.get("status") == "past":
             continue
         ref = extract_ref(lot.get("title_raw", ""))
         if not ref:

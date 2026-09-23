@@ -25,6 +25,8 @@ class Lot:
     estimate_high_usd: Optional[float] = None
     estimate_low_hkd: Optional[float] = None
     current_bid: Optional[float] = None      # live bid if platform exposes it (native ccy)
+    sold_price_basis: str = ""              # hammer | all_in | unknown
+    scoring_enabled: bool = True
     sold_price: Optional[float] = None       # realized price for past lots (native ccy)
     status: str = "upcoming"                 # upcoming | live | past
     buyers_premium_pct: Optional[float] = None

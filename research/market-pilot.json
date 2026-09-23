@@ -1,0 +1,145 @@
+{
+  "checked_at": "2026-09-23T11:39:01.177009+00:00",
+  "sources": {
+    "bonhams": {
+      "scope": "department-linked sales, pilot",
+      "sales": [
+        {
+          "url": "https://www.bonhams.com/auction/31892/new-york-watches/",
+          "catalogue_records": 2,
+          "retained": 0,
+          "complete": true
+        },
+        {
+          "url": "https://www.bonhams.com/auction/32486/paris-watches-online/",
+          "catalogue_records": 1,
+          "retained": 0,
+          "complete": true
+        },
+        {
+          "url": "https://www.bonhams.com/auction/31984/london-watches/",
+          "catalogue_records": 1,
+          "retained": 0,
+          "complete": true
+        },
+        {
+          "url": "https://www.bonhams.com/auction/31985/london-fine-watches/",
+          "catalogue_records": 1,
+          "retained": 0,
+          "complete": true
+        }
+      ],
+      "errors": []
+    },
+    "sothebys": {
+      "scope": "department-linked sales, complete paginated catalogues",
+      "sales": [
+        {
+          "catalogue_records": 107,
+          "expected_records": 107,
+          "retained": 26,
+          "complete": true,
+          "pages": [
+            {
+              "offset": 0,
+              "returned": 48,
+              "new_unique": 48
+            },
+            {
+              "offset": 48,
+              "returned": 48,
+              "new_unique": 48
+            },
+            {
+              "offset": 96,
+              "returned": 11,
+              "new_unique": 11
+            }
+          ],
+          "url": "https://www.sothebys.com/en/buy/auction/2026/fine-watches-pf2660"
+        },
+        {
+          "catalogue_records": 0,
+          "expected_records": 0,
+          "retained": 0,
+          "complete": true,
+          "pages": [
+            {
+              "offset": 0,
+              "returned": 0,
+              "new_unique": 0
+            }
+          ],
+          "url": "https://www.sothebys.com/en/buy/auction/2026/important-watches-ge2604"
+        },
+        {
+          "catalogue_records": 0,
+          "expected_records": 0,
+          "retained": 0,
+          "complete": true,
+          "pages": [
+            {
+              "offset": 0,
+              "returned": 0,
+              "new_unique": 0
+            }
+          ],
+          "url": "https://www.sothebys.com/en/buy/auction/2026/fine-watches-5"
+        },
+        {
+          "catalogue_records": 0,
+          "expected_records": 0,
+          "retained": 0,
+          "complete": true,
+          "pages": [
+            {
+              "offset": 0,
+              "returned": 0,
+              "new_unique": 0
+            }
+          ],
+          "url": "https://www.sothebys.com/en/buy/auction/2026/important-watches-2"
+        },
+        {
+          "catalogue_records": 0,
+          "expected_records": 0,
+          "retained": 0,
+          "complete": true,
+          "pages": [
+            {
+              "offset": 0,
+              "returned": 0,
+              "new_unique": 0
+            }
+          ],
+          "url": "https://www.sothebys.com/en/buy/auction/2026/fine-watches-8"
+        },
+        {
+          "catalogue_records": 0,
+          "expected_records": 0,
+          "retained": 0,
+          "complete": true,
+          "pages": [
+            {
+              "offset": 0,
+              "returned": 0,
+              "new_unique": 0
+            }
+          ],
+          "url": "https://www.sothebys.com/en/buy/auction/2026/fine-watches-7"
+        }
+      ],
+      "errors": []
+    }
+  },
+  "historical_sample": {
+    "url": "https://www.bonhams.com/auction/31990/weekly-watches/",
+    "catalogue_records": 86,
+    "retained": 3,
+    "complete": true
+  },
+  "counts": {
+    "Bonhams": 3,
+    "Sotheby's": 26
+  }
+}

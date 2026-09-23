@@ -64,7 +64,7 @@ def score(lot: dict, to_usd, usd_hkd):
     bid = lot.get("current_bid")
     basis = (bid * rate) if bid is not None else lot.get("estimate_low_usd")
     fv = lot.get("fair_value_usd")
-    if lot.get("status") != "past" and fv and fv > 0 and basis and basis > 0:
+    if lot.get("scoring_enabled", True) and lot.get("status") != "past" and fv and fv > 0 and basis and basis > 0:
         premium = lot.get("buyers_premium_pct")
         bp = (BUYER_PREMIUM_DEFAULT * 100 if premium is None else premium) / 100.0
         landed = basis * (1 + bp + SHIP_INSURE + FX_COST)  # HK import duty = 0%
@@ -117,7 +117,11 @@ def main():
 
     raw = []
     source_health = []
-    for mod in (phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend, allu, crott):
+    modules = [phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend, allu, crott]
+    if os.environ.get("EXPERIMENTAL_MARKETS") == "1":
+        from adapters import bonhams, sothebys
+        modules += [bonhams, sothebys]
+    for mod in modules:
         log = io.StringIO()
         records = []
         state = "returned"
@@ -127,16 +131,22 @@ def main():
             # Existing adapters can swallow failures: a return is not proof of completeness.
             if not records:
                 state = "empty_or_failed"
-            elif any(word in log.getvalue().lower() for word in ("failed", "error", "crashed")):
+            elif any(word in log.getvalue().lower() for word in ("failed", "error", "crashed", "partial")):
                 state = "partial_or_failed"
         except Exception as e:
             state = "failed"
             print(f"[{mod.__name__}] adapter crashed: {e}")
         print(log.getvalue(), end="")
         raw += records
-        source_health.append({"source": mod.__name__.split(".")[-1],
-                              "state": state, "count": len(records),
-                              "checked_at": datetime.now(timezone.utc).isoformat()})
+        report = getattr(mod, "LAST_REPORT", None)
+        if report and not report.get("errors") and not records and report.get("sales"):
+            state = "no_matches"
+        health = {"source": mod.__name__.split(".")[-1],
+                  "state": state, "count": len(records),
+                  "checked_at": datetime.now(timezone.utc).isoformat()}
+        if report:
+            health["coverage"] = report
+        source_health.append(health)
 
     if not raw:
         raise RuntimeError("All adapters returned no lots; preserving existing data")
@@ -188,7 +198,7 @@ def main():
     idx = comps.build_index(archive)
     enriched = 0
     for lot in out:
-        if lot["status"] == "past" or lot.get("fair_value_usd"):
+        if not lot.get("scoring_enabled", True) or lot["status"] == "past" or lot.get("fair_value_usd"):
             continue
         fv, n = comps.fair_value(lot, idx)
         if fv:

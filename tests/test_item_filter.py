@@ -14,6 +14,7 @@ class ItemFilterTests(unittest.TestCase):
             'Cartier leather handbag',
             'Patek Philippe travel bag',
             'Cartier wallet',
+            'Patek Philippe. An electronic winding box for a Perpetual Calendar watch Circa 2010',
             'PATEK PHILIPPE, CALATRAVA-STYLE DEPLOYANT CLASP',
             'PATEK PHILIPPE, SILVER DIAL WITH YELLOW GOLD INDEXES',
             'Patek Philippe leather strap',

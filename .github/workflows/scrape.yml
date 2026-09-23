@@ -19,6 +19,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run scraper
         env:
+          EXPERIMENTAL_MARKETS: "1"
           WATCHCHARTS_API_KEY: ${{ secrets.WATCHCHARTS_API_KEY }}
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: ${{ secrets.TG_CHAT }}

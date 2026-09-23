@@ -1,0 +1,120 @@
+{
+  "apolloCache": {
+    "Auction:test": {
+      "__typename": "Auction",
+      "title": "Fine Watches",
+      "departmentNames": [
+        "Watches",
+        "Marketing"
+      ],
+      "slug": {
+        "__typename": "AuctionSlug",
+        "year": "2026",
+        "name": "fine-watches-pf2660"
+      },
+      "currencyV2": "EUR",
+      "dates": {
+        "__typename": "TimedAuctionDates",
+        "acceptsBids": "2026-09-23T12:00Z",
+        "startsToClose": "2026-10-07T12:00Z",
+        "published": "2026-03-26T14:40:37.124496Z",
+        "closed": "2026-10-07T13:47Z"
+      }
+    },
+    "LotCard:test": {
+      "__typename": "LotCard",
+      "id": "TG90Q2FyZF8wMTllYjA5OS1iYzY1LTdiNTktYTQwYi05ZDY4MTY4ODNjYWE=",
+      "lotId": "019eb099-bc65-7b59-a40b-9d6816883caa",
+      "title": "Référence 5960/1A-001, montre bracelet chronographe flyback à quantième annuel en acier avec indicateur de réserve de marche et indicateur jour/nuit, circa 2014",
+      "lotTags": [],
+      "acceptsCryptoPayments": false,
+      "auction": {
+        "__typename": "AuctionCard",
+        "auctionId": "56757583-352a-4d5a-9169-8a90950799ec",
+        "sapSaleNumber": "PF2660",
+        "currency": "EUR",
+        "slug": {
+          "__typename": "AuctionSlug",
+          "name": "fine-watches-pf2660",
+          "year": "2026"
+        },
+        "locationV2": {
+          "__typename": "AuctionLocation",
+          "name": "Paris"
+        },
+        "state": "Published",
+        "dates": {
+          "__typename": "TimedAuctionDates",
+          "startsToClose": "2026-10-07T12:00Z"
+        },
+        "type": "Timed"
+      },
+      "lotNumber": {
+        "__typename": "VisibleLotNumber",
+        "lotDisplayNumber": "351"
+      },
+      "bidState": {
+        "__ref": "BidState:QmlkU3RhdGVfMDE5ZWIwOTktYmM2NS03YjU5LWE0MGItOWQ2ODE2ODgzY2Fh"
+      },
+      "latestBid": {
+        "__ref": "UserBidConnection:TGF0ZXN0VXNlckJpZENvbm5lY3Rpb25fMDE5ZWIwOTktYmM2NS03YjU5LWE0MGItOWQ2ODE2ODgzY2FhX3VuZGVmaW5lZA=="
+      },
+      "sapAuctionSaleNumber": "PF2660",
+      "subtitle": null,
+      "creatorsDisplayTitle": "Patek Philippe",
+      "premiumLotState": {
+        "__ref": "PremiumLotState:UHJlbWl1bUxvdFN0YXRlXzAxOWViMDk5LWJjNjUtN2I1OS1hNDBiLTlkNjgxNjg4M2NhYV91bmRlZmluZWQ="
+      },
+      "slug": {
+        "__typename": "LotSlug",
+        "lotSlug": "reference-5960-1a-001-montre-bracelet-chronographe"
+      },
+      "parcel": null,
+      "estimateV2": {
+        "__typename": "LowHighEstimateV2",
+        "highEstimate": {
+          "__typename": "Amount",
+          "amount": "40000"
+        },
+        "lowEstimate": {
+          "__typename": "Amount",
+          "amount": "30000"
+        }
+      },
+      "withdrawnState": {
+        "__typename": "LotWithdrawnState",
+        "state": "NotAffected"
+      },
+      "sessionId": 0,
+      "isSaved": false
+    },
+    "BidState:QmlkU3RhdGVfMDE5ZWIwOTktYmM2NS03YjU5LWE0MGItOWQ2ODE2ODgzY2Fh": {
+      "__typename": "BidState",
+      "id": "QmlkU3RhdGVfMDE5ZWIwOTktYmM2NS03YjU5LWE0MGItOWQ2ODE2ODgzY2Fh",
+      "isClosed": false,
+      "reserveMet": false,
+      "numberOfBids": null,
+      "bidTypeV2": {
+        "__typename": "TimedBidTypeV2",
+        "timedBidPhase": "Published",
+        "bidMethod": "Online"
+      },
+      "currentBidV2": null,
+      "startingBidV2": {
+        "__typename": "Amount",
+        "currency": "EUR",
+        "amount": "30000"
+      },
+      "sold": {
+        "__typename": "ResultVisible",
+        "isSold": false,
+        "premiums": {
+          "__typename": "Premiums",
+          "finalPriceV2": null
+        }
+      },
+      "closingTime": "2026-10-07T12:01Z"
+    }
+  },
+  "totalLotCount": 107
+}
