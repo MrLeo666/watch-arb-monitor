@@ -59,3 +59,20 @@ elements.favoritesOnly.checked = false;
 elements.flagOnly.checked = true;
 assert.match(render({...base,arb_flag:true,last_seen:'2020-01-01T00:00:00Z'}), /沒有符合條件/);
 console.log('Decision caps, stale-data gating, favorites and escaping passed');
+// Non-active and stale observations must never become opportunities or sold results.
+for(const status of ['unsold','withdrawn','ended','unknown']){
+  context.stateLot={...base,status,last_seen:new Date().toISOString(),arb_flag:true};
+  assert.equal(evalJS('actionable(stateLot)'),false);
+}
+assert.equal(evalJS('isFresh({last_seen:new Date().toISOString(),data_stale:true})'),false);
+elements.flagOnly.checked=false;
+elements.status.value='stale';
+assert.match(render({...base,data_stale:true,last_seen:'2026-09-23T00:00:00Z'}),/未更新／待核實/);
+elements.status.value='active';
+assert.match(render({...base,data_stale:true}),/沒有符合條件/);
+elements.status.value='unsold';
+const unsold=render({...base,status:'unsold',current_bid:1000,sold_price:5000});
+assert.match(unsold,/流拍/);assert.doesNotMatch(unsold,/USD 1,000|EUR 5,000/);
+elements.status.value='ended';
+assert.match(render({...base,status:'ended'}),/已結束／結果待確認/);
+console.log('Lifecycle filters, stale observations and non-sale price suppression passed');

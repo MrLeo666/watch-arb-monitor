@@ -10,6 +10,7 @@ import requests
 from adapters import phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend, allu, crott
 import comps
 import c24
+from lifecycle import active, normalize, preserve_missing, merge_archive
 from adapters.base import Lot  # noqa: F401
 from adapters.item_filter import exclusion_reason
 
@@ -64,7 +65,7 @@ def score(lot: dict, to_usd, usd_hkd):
     bid = lot.get("current_bid")
     basis = (bid * rate) if bid is not None else lot.get("estimate_low_usd")
     fv = lot.get("fair_value_usd")
-    if lot.get("scoring_enabled", True) and lot.get("status") != "past" and fv and fv > 0 and basis and basis > 0:
+    if lot.get("scoring_enabled", True) and active(lot) and fv and fv > 0 and basis and basis > 0:
         premium = lot.get("buyers_premium_pct")
         bp = (BUYER_PREMIUM_DEFAULT * 100 if premium is None else premium) / 100.0
         landed = basis * (1 + bp + SHIP_INSURE + FX_COST)  # HK import duty = 0%
@@ -119,8 +120,8 @@ def main():
     source_health = []
     modules = [phillips, loupethis, bezel, antiquorum, watchcollecting, monacolegend, allu, crott]
     if os.environ.get("EXPERIMENTAL_MARKETS") == "1":
-        from adapters import bonhams, sothebys
-        modules += [bonhams, sothebys]
+        from adapters import bonhams, sothebys, bukowskis
+        modules += [bonhams, sothebys, bukowskis]
     for mod in modules:
         log = io.StringIO()
         records = []
@@ -155,7 +156,7 @@ def main():
     out, new_lots = [], []
     excluded_non_watch = 0
     for lot_obj in raw:
-        lot = lot_obj.dict()
+        lot = normalize(lot_obj.dict())
         if exclusion_reason(lot.get("title_raw")):
             excluded_non_watch += 1
             continue
@@ -167,10 +168,12 @@ def main():
             lot["is_new"] = False
         else:
             lot["is_new"] = True
-            if lot["status"] != "past":
+            if active(lot):
                 new_lots.append(lot)
         lot["last_seen"] = now
         out.append(lot)
+
+    out = preserve_missing(out, prev, source_health, now)
 
     # Archive persistence: past lots that dropped off source listings are kept
     # forever in archive.json — the comps engine compounds over time.
@@ -181,15 +184,7 @@ def main():
                 archive = json.load(f)
         except Exception:
             archive = []
-    known = {l["lot_id"] for l in out}
-    arch_ids = {l["lot_id"] for l in archive}
-    for lid, old in prev.items():
-        if lid not in known and lid not in arch_ids and old.get("sold_usd"):
-            archive.append(old)
-    for l in out:
-        if l["status"] == "past" and l.get("sold_usd") and l["lot_id"] not in arch_ids:
-            archive.append(l)
-            arch_ids.add(l["lot_id"])
+    archive = merge_archive(archive, out)
     with open(ARCHIVE_PATH, "w", encoding="utf-8") as f:
         json.dump(archive, f, ensure_ascii=False)
     print(f"[archive] {len(archive)} realized lots banked")
@@ -198,7 +193,7 @@ def main():
     idx = comps.build_index(archive)
     enriched = 0
     for lot in out:
-        if not lot.get("scoring_enabled", True) or lot["status"] == "past" or lot.get("fair_value_usd"):
+        if not lot.get("scoring_enabled", True) or not active(lot) or lot.get("fair_value_usd"):
             continue
         fv, n = comps.fair_value(lot, idx)
         if fv:
@@ -213,13 +208,13 @@ def main():
     # the token-matched comps basis for that lot.
     c24.enrich(out)
     for lot in out:
-        if lot.get("c24_low_usd") and lot["status"] != "past":
+        if lot.get("c24_low_usd") and lot.get("scoring_enabled", True) and active(lot):
             lot["fair_value_usd"] = round(lot["c24_low_usd"] * 0.85)
             lot["fair_value_source"] = f"C24({lot.get('c24_count')})"
             score(lot, to_usd, usd_hkd)
 
     # sort: live/upcoming first by date, then past
-    out.sort(key=lambda l: (l["status"] == "past", l.get("auction_date") or "9999"))
+    out.sort(key=lambda l: (not active(l), l.get("auction_date") or "9999"))
 
     os.makedirs("docs", exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
@@ -229,7 +224,8 @@ def main():
                    "filter": {"excluded_non_watch": excluded_non_watch, "rule": "standalone-accessories-v1"},
                    "counts": {"total": len(out),
                               "new": len(new_lots),
-                              "active": sum(1 for l in out if l["status"] != "past")}},
+                              "active": sum(1 for l in out if active(l)),
+                              "stale": sum(bool(l.get("data_stale")) for l in out)}},
                   f, ensure_ascii=False)
     print(f"[build] {len(out)} lots ({len(new_lots)} new active) -> {OUT_PATH}")
     notify(new_lots)

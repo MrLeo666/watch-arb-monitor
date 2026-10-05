@@ -28,6 +28,11 @@ class Lot:
     sold_price_basis: str = ""              # hammer | all_in | unknown
     scoring_enabled: bool = True
     sold_price: Optional[float] = None       # realized price for past lots (native ccy)
+    source_status: str = ""
+    sale_result: str = ""
+    data_stale: bool = False
+    stale_reason: str = ""
+    missing_since: str = ""
     status: str = "upcoming"                 # upcoming | live | past
     buyers_premium_pct: Optional[float] = None
     image_url: str = ""

@@ -41,16 +41,31 @@ def parse_cards(cards, auction, cache=None):
         brand, keyword = match_brand(title)
         if not brand or exclusion_reason(title):
             continue
-        if (r.get('withdrawnState') or {}).get('state') != 'NotAffected':
-            continue
         bid = r.get('bidState') or {}
         if '__ref' in bid:
             bid = cache.get(bid['__ref'], {})
-        phase = (bid.get('bidTypeV2') or {}).get('timedBidPhase')
-        # Only the verified pre-bidding schema is enabled in this first pilot.
-        # Closed results need separate hammer/all-in reconciliation.
-        if bid.get('isClosed') is not False or phase != 'Published':
-            continue
+        phase = (bid.get('bidTypeV2') or {}).get('timedBidPhase', '')
+        withdrawn = (r.get('withdrawnState') or {}).get('state')
+        result = bid.get('sold') or {}
+        status = 'unknown'; sold = None; sale_result = ''
+        if withdrawn == 'Withdrawn':
+            status = 'withdrawn'
+        elif withdrawn not in {'NotAffected', 'UnWithdrawn'}:
+            status = 'unknown'
+        elif bid.get('isClosed') is True:
+            if result.get('__typename') == 'ResultVisible' and result.get('isSold') is True:
+                status = 'past'; sale_result = 'sold'
+                final = (result.get('premiums') or {}).get('finalPriceV2') or {}
+                if final.get('currency') == auction['currencyV2']:
+                    sold = amount(final)
+            elif result.get('__typename') == 'ResultVisible' and result.get('isSold') is False:
+                status = 'unsold'
+            else:
+                status = 'ended'
+        elif bid.get('isClosed') is False:
+            status = {'Published':'upcoming', 'AcceptingBids':'live'}.get(phase, 'unknown')
+        current = bid.get('currentBidV2') or {}
+        current_bid = amount(current) if status == 'live' and current.get('currency') == auction['currencyV2'] else None
         estimate = r.get('estimateV2') or {}; slug = auction['slug']
         media = next((v for k,v in r.items() if k == 'media' or k.startswith('media(')), {})
         images = media.get('images') or []
@@ -63,7 +78,10 @@ def parse_cards(cards, auction, cache=None):
             lot_number=r['lotNumber']['lotDisplayNumber'], brand=brand, brand_matched_keyword=keyword,
             title_raw=title, estimate_currency=auction['currencyV2'],
             estimate_low=amount(estimate.get('lowEstimate')), estimate_high=amount(estimate.get('highEstimate')),
-            status='upcoming', image_url=image, manual_review=True, scoring_enabled=False))
+            status=status, current_bid=current_bid, sold_price=sold,
+            sold_price_basis='all_in' if sold else '', sale_result=sale_result,
+            source_status=f'{withdrawn}/{phase}/closed={bid.get("isClosed")}',
+            image_url=image, manual_review=True, scoring_enabled=False))
     return lots
 
 

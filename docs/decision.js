@@ -10,7 +10,9 @@ function savePrivate() {
   try { localStorage.setItem('watch-decision-v1', JSON.stringify(privateState)); }
   catch (_) { $('privacyNotice').textContent = '儲存不可用：本次修改只保留到頁面關閉。'; }
 }
+function isActive(l) { return ['live','upcoming'].includes(l.status) && !l.data_stale; }
 function isFresh(l, now = Date.now()) {
+  if (l.data_stale) return false;
   const age = now - Date.parse(l.last_seen);
   return Number.isFinite(age) && age >= 0 && age <= 30 * 60 * 1000;
 }
@@ -19,7 +21,7 @@ function endTime(l) {
 }
 function actionable(l) {
   const end = endTime(l);
-  return l.scoring_enabled !== false && l.status !== 'past' && isFresh(l) && !(Number.isFinite(end) && end <= Date.now());
+  return l.scoring_enabled !== false && isActive(l) && isFresh(l) && !(Number.isFinite(end) && end <= Date.now());
 }
 function timing(l) {
   const end = endTime(l);
@@ -36,13 +38,13 @@ function bidCap(p) {
 }
 function renderOverview(meta) {
   const favorites = LOTS.filter(l => privateState.favorites.includes(l.lot_id));
-  const soon = favorites.filter(l => l.status !== 'past' && endTime(l) > Date.now() && endTime(l) - Date.now() <= 24*3600000);
-  const old = LOTS.filter(l => l.status !== 'past' && !isFresh(l)).length;
+  const soon = favorites.filter(l => isActive(l) && endTime(l) > Date.now() && endTime(l) - Date.now() <= 24*3600000);
+  const old = LOTS.filter(l => (l.data_stale || ['live','upcoming','unknown','ended'].includes(l.status)) && !isFresh(l)).length;
   $('overview').innerHTML = `<b>決策清單</b> · 收藏 ${favorites.length} 件 · 24 小時內結標 ${soon.length} 件 · 待刷新 ${old} 件
     <p class="sub">價格超過 30 分鐘即停用套利提示；目前仍為每日抓取。收藏與報價只存於此瀏覽器，不跨裝置同步。</p>
     ${soon.map(l=>`<p>${esc(l.title_raw)} · ${timing(l)} · <a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener">核對官方出價</a></p>`).join('')}`;
   const states = {no_matches:'已檢查目錄，未篩出目標拍品',returned:'已返回資料，完整性未驗證',empty_or_failed:'無資料或抓取失敗',partial_or_failed:'可能不完整',failed:'抓取失敗'};
-  $('health').innerHTML = '<summary>平台資料狀態</summary>' + (meta?.sources?.length ? meta.sources.map(s=>`<p>${esc(s.source)} · ${esc(states[s.state] || '未知')} · ${Number(s.count)||0} 件 · ${esc(s.checked_at)}</p>`).join('') : '<p>此批資料尚無平台健康記錄；下次抓取後產生。不能將缺少資料視為沒有拍品。</p>');
+  $('health').innerHTML = '<summary>平台資料狀態</summary>' + (meta?.sources?.length ? meta.sources.map(s=>`<p>${esc(s.source)} · ${esc(states[s.state] || '未知')} · ${Number(s.count)||0} 件 · 保留待核實 ${Number(s.retained_stale)||0} 件 · ${esc(s.checked_at)}</p>`).join('') : '<p>此批資料尚無平台健康記錄；下次抓取後產生。不能將缺少資料視為沒有拍品。</p>');
 }
 function openQuote(id) {
   const lot = LOTS.find(l => l.lot_id === id);

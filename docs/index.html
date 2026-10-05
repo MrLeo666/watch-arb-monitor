@@ -152,7 +152,10 @@ dialog{margin:auto;background:var(--panel);color:var(--text);border:1px solid va
     <select id="status" aria-label="狀態">
       <option value="active" selected>進行中 + 即將上拍</option>
       <option value="live">僅進行中(可出價)</option>
-      <option value="past">過往成交(參考價)</option>
+      <option value="past">已確認成交</option>
+      <option value="unsold">流拍</option><option value="withdrawn">撤拍</option>
+      <option value="ended">已結束／結果待確認</option>
+      <option value="unknown">狀態未知</option><option value="stale">未更新／待核實</option>
       <option value="">全部</option>
     </select>
     <label class="toggle"><input type="checkbox" id="favoritesOnly">只看收藏</label>
@@ -184,7 +187,7 @@ async function load(){
     ]);
     if (!Array.isArray(lots)) throw new Error("Invalid lots");
     LOTS=lots; META=meta;
-    if(meta&&meta.updated_at) $('updated').textContent='更新於 '+meta.updated_at.slice(0,16).replace('T',' ')+' UTC';
+    if(meta&&meta.updated_at) $('updated').textContent='完整更新 '+meta.updated_at.slice(0,16).replace('T',' ')+' UTC' + (meta.partial_updated_at ? ' · 部分市場更新 '+meta.partial_updated_at.slice(0,16).replace('T',' ')+' UTC' : '');
     const bs=[...new Set(LOTS.map(l=>l.brand))].sort();
     const ps=[...new Set(LOTS.map(l=>l.platform))].sort();
     bs.forEach(b=>$('brand').add(new Option(b,b)));
@@ -202,9 +205,10 @@ function imgUrl(l,w){
   return u; // Bezel/Loupe This originals are already large; Antiquorum only serves medium
 }
 function statusChip(l){
-  if(l.status==='live') return '<span class="chip live">進行中</span>';
-  if(l.status==='past') return '<span class="chip past">已成交</span>';
-  return '<span class="chip up">即將上拍</span>';
+  if(l.data_stale) return '<span class="chip review">未更新／待核實</span>';
+  const labels={live:'進行中',upcoming:'即將上拍',past:'已成交',unsold:'流拍',withdrawn:'撤拍',ended:'已結束／結果待確認',unknown:'狀態未知'};
+  const cls=l.status==='live'?'live':l.status==='upcoming'?'up':'past';
+  return `<span class="chip ${cls}">${labels[l.status]||'狀態未知'}</span>`;
 }
 
 function render(){
@@ -214,9 +218,9 @@ function render(){
     if($('brand').value&&l.brand!==$('brand').value)return false;
     if($('platform').value&&l.platform!==$('platform').value)return false;
     const st=$('status').value;
-    if(st==='active'&&l.status==='past')return false;
-    if(st==='live'&&l.status!=='live')return false;
-    if(st==='past'&&l.status!=='past')return false;
+    if(st==='active'&&!isActive(l))return false;
+    if(st==='stale'&&!l.data_stale)return false;
+    if(st && !['active','stale'].includes(st) && (l.status!==st || l.data_stale))return false;
     if($('favoritesOnly').checked&&!privateState.favorites.includes(l.lot_id))return false;
     if($('newOnly').checked&&!l.is_new)return false;
     if($('flagOnly').checked&&(!l.arb_flag||!actionable(l)))return false;
@@ -232,7 +236,7 @@ function render(){
 
   let html='';
   for(const b of order){
-    const g=groups[b].sort((x,y)=>(x.status==='past')-(y.status==='past')||(x.auction_date||'').localeCompare(y.auction_date||''));
+    const g=groups[b].sort((x,y)=>Number(!isActive(x))-Number(!isActive(y))||(x.auction_date||'').localeCompare(y.auction_date||''));
     html+=`<div class="brand-head"><h2>${esc(b)}</h2><span class="n">${g.length} 件</span></div>
     <div class="tbl"><div class="thead"><div class="trow">
       <div class="cell c-img">圖</div>
@@ -251,13 +255,13 @@ function render(){
         }else est=native;
       }
       let px='—',cls='',pxSub='';
-      if(l.current_bid!=null){
+      if(l.current_bid!=null&&['live','upcoming'].includes(l.status)){
         const native=`${esc(l.estimate_currency||'幣種未提供')} ${fmt(l.current_bid)}`;
         if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.current_bid_usd!=null){px=`USD ${fmt(l.current_bid_usd)}`;pxSub=native;}
         else px=native;
         cls='mono';
       }
-      else if(l.sold_price!=null){
+      else if(l.sold_price!=null&&l.status==='past'){
         const native=`${esc(l.estimate_currency)} ${fmt(l.sold_price)}`;
         if(l.estimate_currency&&l.estimate_currency!=='USD'&&l.sold_usd!=null){px=`USD ${fmt(l.sold_usd)}`;pxSub=native;}
         else px=native;
@@ -272,9 +276,9 @@ function render(){
       const thumb=l.image_url
         ?`<a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${safeUrl(imgUrl(l,240))}" data-large="${safeUrl(imgUrl(l,800))}" alt="" onerror="this.style.display='none'"></a>`
         :'<div class="thumb thumb-empty"></div>';
-      html+=`<div class="lot st-${['live','past','upcoming'].includes(l.status)?l.status:'upcoming'}${l.is_new?' newlot':''}">
+      html+=`<div class="lot st-${['live','past','upcoming','unsold','withdrawn','ended','unknown'].includes(l.status)?l.status:'unknown'}${l.is_new?' newlot':''}">
         <div class="cell c-img">${thumb}</div>
-        <div class="cell c-status">${statusChip(l)}<div class="sub">${isFresh(l)?'30 分鐘內核驗':'價格待刷新'}</div></div>
+        <div class="cell c-status">${statusChip(l)}<div class="sub">${l.data_stale?'本次未取得，保留舊資料':isFresh(l)?'30 分鐘內核驗':'價格待刷新'}${l.data_stale?'<br>最後見於 '+esc(l.last_seen||'未知'):''}</div></div>
         <div class="cell c-title title-cell"><a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener">${esc(l.title_raw||'')}</a>${rev}${pilot}
           <div class="sub m-lot">Lot ${esc(l.lot_number||'—')}</div>
           <div class="actions"><button data-action="favorite" data-lot="${esc(l.lot_id)}" aria-pressed="${privateState.favorites.includes(l.lot_id)}">${privateState.favorites.includes(l.lot_id)?'★ 已收藏':'☆ 收藏'}</button><button data-action="quote" data-lot="${esc(l.lot_id)}">報價試算</button></div></div>

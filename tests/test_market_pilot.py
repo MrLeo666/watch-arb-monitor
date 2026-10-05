@@ -31,7 +31,9 @@ class MarketPilotTests(unittest.TestCase):
     def test_unsold_and_withdrawn_not_marked_sold(self):
         for state in ('UNSOLD','WITHDRAWN','UNKNOWN'):
             r=copy.deepcopy(self.b['records'][0]);r['status']=state
-            self.assertIsNone(bonhams.parse_record(r,self.b['auction']))
+            lot=bonhams.parse_record(r,self.b['auction'])
+            self.assertEqual(lot.status, {'UNSOLD':'unsold','WITHDRAWN':'withdrawn','UNKNOWN':'ended'}[state])
+            self.assertIsNone(lot.sold_price)
 
     def test_bonhams_pagination_and_repeat_guard(self):
         first={'auction':self.b['auction'],'lotData':{'auctionLots':[self.b['records'][0]],'nbHits':2}}
@@ -54,7 +56,9 @@ class MarketPilotTests(unittest.TestCase):
     def test_closed_sothebys_not_invented_result(self):
         for v in self.s['apolloCache'].values():
             if v.get('__typename')=='BidState':v['isClosed']=True
-        self.assertEqual(sothebys.parse_sale(html(self.s))[0],[])
+        lot=sothebys.parse_sale(html(self.s))[0][0]
+        self.assertEqual(lot.status,'unsold')
+        self.assertIsNone(lot.sold_price)
 
     def test_pilot_cannot_generate_arbitrage_or_comps(self):
         lot=bonhams.parse_record(self.b['records'][0],self.b['auction']).dict()
