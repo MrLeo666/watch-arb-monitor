@@ -5,6 +5,7 @@ const html = fs.readFileSync('docs/index.html', 'utf8');
 const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
 const elements = {};
 const context = vm.createContext({
+  URLSearchParams,
   document: { getElementById(id) {
     return elements[id] ||= { value: '', checked: false, innerHTML: '', addEventListener() {} };
   } },
@@ -76,3 +77,6 @@ assert.match(unsold,/流拍/);assert.doesNotMatch(unsold,/USD 1,000|EUR 5,000/);
 elements.status.value='ended';
 assert.match(render({...base,status:'ended'}),/已結束／結果待確認/);
 console.log('Lifecycle filters, stale observations and non-sale price suppression passed');
+
+assert.match(evalJS("historyLink({brand: 'Patek Philippe',title_raw: 'Nautilus Ref. 5711/1A'})"), /q=5711/);
+assert.equal(evalJS("historyLink({brand: 'F.P. Journe'})"), '');

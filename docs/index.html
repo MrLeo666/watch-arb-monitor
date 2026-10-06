@@ -141,6 +141,7 @@ dialog{margin:auto;background:var(--panel);color:var(--text);border:1px solid va
     <h1>錶市套利監控台</h1>
     <span class="en">Watch Auction Arbitrage Monitor</span>
     <span class="updated" id="updated"></span>
+    <a href="history.html">型號價格歷史 ↗</a>
   </div>
 </header>
 
@@ -281,7 +282,7 @@ function render(){
         <div class="cell c-status">${statusChip(l)}<div class="sub">${l.data_stale?'本次未取得，保留舊資料':isFresh(l)?'30 分鐘內核驗':'價格待刷新'}${l.data_stale?'<br>最後見於 '+esc(l.last_seen||'未知'):''}</div></div>
         <div class="cell c-title title-cell"><a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener">${esc(l.title_raw||'')}</a>${rev}${pilot}
           <div class="sub m-lot">Lot ${esc(l.lot_number||'—')}</div>
-          <div class="actions"><button data-action="favorite" data-lot="${esc(l.lot_id)}" aria-pressed="${privateState.favorites.includes(l.lot_id)}">${privateState.favorites.includes(l.lot_id)?'★ 已收藏':'☆ 收藏'}</button><button data-action="quote" data-lot="${esc(l.lot_id)}">報價試算</button></div></div>
+          <div class="actions"><button data-action="favorite" data-lot="${esc(l.lot_id)}" aria-pressed="${privateState.favorites.includes(l.lot_id)}">${privateState.favorites.includes(l.lot_id)?'★ 已收藏':'☆ 收藏'}</button><button data-action="quote" data-lot="${esc(l.lot_id)}">報價試算</button> ${historyLink(l)}</div></div>
         <div class="cell c-platform">${esc(l.platform)}${l.auction_name&&l.auction_name!==l.platform?`<div class="sub">${esc(l.auction_name)}</div>`:''}</div>
         <div class="cell c-date"><span class="lbl">日期</span><span class="val mono">${timing(l)}</span></div>
         <div class="cell c-est num"><span class="lbl">估價</span><span class="val mono">${est}${estSub?`<span class="val-sub">${estSub}</span>`:''}</span></div>

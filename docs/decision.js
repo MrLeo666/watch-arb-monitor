@@ -80,3 +80,15 @@ function setupDecision() {
   });
   setInterval(() => { if (LOTS.length) render(); }, 60000);
 }
+
+// A history link is a research shortcut, never an automatic valuation match.
+function historyLink(lot) {
+  if (!['Patek Philippe', 'Cartier'].includes(lot.brand)) return '';
+  const title = lot.title_raw || '';
+  const ref = title.match(/\b(?:ref(?:erence)?\.?)[\s:]*([0-9]{4})(?![0-9])/i);
+  const model = title.match(/\b(Nautilus|Calatrava|Aquanaut|Pasha|Tank|Santos)\b/i);
+  const query = new URLSearchParams({brand:lot.brand});
+  if (ref && lot.brand === 'Patek Philippe' && ['3700','3800','5711','5712'].includes(ref[1])) query.set('q',ref[1]);
+  else if (model) query.set('q',model[1]);
+  return `<a href="history.html?${esc(query.toString())}">價格歷史 ↗</a>`;
+}

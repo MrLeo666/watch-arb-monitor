@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>型號價格歷史 · 錶市雷達</title><link rel="stylesheet" href="history.css"></head>
+<body>
+<header><a href="index.html">← 返回拍賣雷達</a><p class="eyebrow">WATCH RADAR / PRICE HISTORY</p><h1>先看歷史，再判斷價格。</h1><p>按系列與參考編號查看公開拍賣價格觀察，辨別樣本與時間跨度。</p></header>
+<main>
+<section class="notice"><b>歷史參考，非當前估值</b><p>來源為 Collector Square LuxPrice-Index 公開圖表。價格以來源標示的 EUR 呈現；含佣金與匯率口徑尚未核實。同一編號可能混合材質、盤面與特別版本，不能直接用於最高報價或套利評分。</p><p id="loadState" role="status">正在載入歷史資料…</p></section>
+<div class="layout"><aside><label for="historyBrand">品牌</label><select id="historyBrand"><option value="">全部品牌</option></select><label for="historySearch">系列 / 參考編號</label><input id="historySearch" type="search" placeholder="例如 Nautilus、5711、Tank"><div id="seriesList" aria-label="歷史系列"></div></aside>
+<section id="historyDetail" aria-live="polite"><p>選擇左側系列，查看歷史價格。</p></section></div>
+</main><footer>不同系列可能包含相同交易，樣本數不可相加。來源圖表未提供逐點拍品身分；相同日期及價格不等於重複資料。未抓取需登入的成交明細。</footer>
+<script src="history.js"></script></body></html>

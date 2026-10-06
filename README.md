@@ -141,3 +141,19 @@ GitHub Actions 已設置 `EXPERIMENTAL_MARKETS=1`，每日加入這兩個來源�
 - GitHub Actions 曾返回 HTTP 403，而本機可讀取；這不代表雲端限制已解除。可用 `.venv/bin/python scripts/refresh_markets.py bonhams bukowskis` 單獨刷新本地來源，不發通知、不推送，保留其他來源時間與完整抓取時間。失敗保留舊記錄並標記待核實。
 - Bukowskis 接入北歐線上 Timepieces 分類，校驗分頁及總數；只保留白名單品牌且標題明確為腕表的拍品，排除配件。保留原幣估價、公開當前出價和精確結標時間；過期出價不當作成交價。此試接暫不覆蓋懷表或現場拍賣，也不參與套利評分及成交比價。
 - Bukowskis 已加入 `EXPERIMENTAL_MARKETS=1` 執行路徑；須發布此版本後才會在雲端每日執行。
+
+## 型號價格歷史（Collector Square 公開圖表）
+
+入口：`docs/history.html`。按品牌、系列／參考編號篩選，查看年度樣本中位數、散點及逐年範圍；雷達上的「價格歷史」可跳轉。
+
+```bash
+.venv/bin/python scripts/refresh_price_history.py
+node tests/test_history.cjs
+```
+
+- 固定接入 10 個公開頁面：Patek Philippe Nautilus（含 3700、3800、5711、5712 編號家族）、Calatrava、Aquanaut；Cartier Pasha、Tank、Santos。來源清單在腳本 `SOURCES`，不是全站爬取。
+- `docs/price_history.json` 與拍品、成交檔案及套利評分分開；歷史資料需手動刷新。執行更新後需核對及發佈才能更新線上資料。
+- 僅讀公開圖表，不讀登入後明細。EUR 單位依來源公開圖表腳本確認；含佣金、歷史匯率口徑與每筆身份尚未驗證。價格點不等於可比成交，也不等於當前可實現售價。
+- 系列及 reference 家族可能混合材質、盤面及特別版，彼此重疊，不相加、不合併計算收益。未滿足兩個獨立來源驗證，禁止自動填入公允價或報價上限。
+- 保留相同日期／價格的多個觀察值及正值離群點；僅排除非正價格並記錄數量。失敗時保留上次資料並標 stale，整體更新回傳非零狀態。
+- 原始公開頁面保存在 `tmp/collector_square/`，不提交；資料中保留來源 URL、擷取日期和 SHA256，可供人工追溯。來源網站改版後需重新驗證解析器及 EUR 口徑。
