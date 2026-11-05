@@ -3,15 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>錶市套利監控台 · Watch Arbitrage Monitor</title>
+<title>拍卖雷达</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
 <style>
-:root{
-  --ink:#10141a; --panel:#171d26; --panel2:#1d2530; --line:#2a3542;
-  --text:#e8edf2; --muted:#8b98a5; --gold:#c9a961; --gold-dim:#8a744a;
-  --blue:#7fa8d0; --green:#4ade80; --red:#f87171;
-}
 *{box-sizing:border-box;margin:0;padding:0}
 html{overflow-x:hidden}
 body{background:var(--ink);color:var(--text);font-family:"Noto Sans TC",system-ui,sans-serif;font-size:14px;line-height:1.5;overflow-x:hidden}
@@ -23,7 +19,7 @@ h1{font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:600;letter-
 .masthead .en{color:var(--muted);font-size:12px;letter-spacing:2.5px;text-transform:uppercase}
 .updated{margin-left:auto;color:var(--muted);font-size:12px}
 
-.controls{position:sticky;top:0;z-index:10;background:rgba(16,20,26,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:12px 22px}
+.controls{position:sticky;top:0;z-index:10;background:var(--toolbar);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:12px 22px}
 .controls-inner{max-width:1400px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 input[type=text],select{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:8px 11px;border-radius:8px;font-size:13px;font-family:inherit;max-width:100%}
 input[type=text]{min-width:220px;flex:1;max-width:340px}
@@ -117,7 +113,6 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;paddin
   }
   .cell.c-date{margin-top:6px}
   .lot.st-upcoming .cell.c-price{display:none}
-  .lot.st-past .cell.c-est{display:none}
   .cell .lbl{display:inline;color:var(--muted);font-size:11px;letter-spacing:.5px;text-align:left;white-space:nowrap}
   .cell .val{min-width:0;overflow-wrap:anywhere}
   .cell.c-date .val{white-space:nowrap}
@@ -134,12 +129,13 @@ button{background:var(--panel2);color:var(--gold);border:1px solid var(--gold-di
 dialog{margin:auto;background:var(--panel);color:var(--text);border:1px solid var(--gold-dim);border-radius:14px;padding:22px;width:min(620px,94vw);max-height:90vh;overflow:auto}dialog::backdrop{background:#000b}dialog h2{margin:14px 0}#quoteFields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}#quoteFields label{display:grid;gap:6px;font-size:12px}#quoteFields input{width:100%;min-width:0;background:var(--ink);color:var(--text);padding:10px;border:1px solid var(--line);border-radius:6px;font-size:16px}#quoteResult{margin-top:18px;line-height:1.8}
 @media(max-width:760px){.decision{margin:14px;padding:14px}.cell.c-date .val{white-space:normal}.controls{position:static}.controls select{flex:1 1 28%;min-width:90px}}
 </style>
+<link rel="stylesheet" href="cards.css">
 </head>
 <body>
 <header>
   <div class="masthead">
-    <h1>錶市套利監控台</h1>
-    <span class="en">Watch Auction Arbitrage Monitor</span>
+    <h1>拍卖雷达</h1>
+    <span class="en">Auction Radar</span>
     <span class="updated" id="updated"></span>
     <a href="history.html">型號價格歷史 ↗</a>
   </div>
@@ -166,7 +162,7 @@ dialog{margin:auto;background:var(--panel);color:var(--text);border:1px solid va
   </div>
 </div>
 
-<section class="decision" aria-label="決策概覽"><div id="overview"></div><details id="health"></details><p id="privacyNotice" class="sub" role="status"></p></section>
+<details class="decision"><summary>決策概覽與平台資料狀態</summary><div id="overview"></div><details id="health"></details><p id="privacyNotice" class="sub" role="status"></p></details>
 <main id="main"></main>
 <dialog id="quoteDialog" aria-labelledby="quoteTitle"><button id="quoteClose" type="button">關閉</button><h2 id="quoteTitle"></h2><p id="quoteContext" class="sub"></p><form id="quoteForm"><div id="quoteFields"></div><button type="submit">計算並儲存於本機</button></form><p id="quoteResult" role="status"></p></dialog>
 
@@ -275,12 +271,12 @@ function render(){
       const pilot=l.scoring_enabled===false?' <span class="chip review">試接 · 不評分</span>':'';
       const rev=l.manual_review?' <span class="chip review">須人工核對</span>':'';
       const thumb=l.image_url
-        ?`<a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${safeUrl(imgUrl(l,240))}" data-large="${safeUrl(imgUrl(l,800))}" alt="" onerror="this.style.display='none'"></a>`
+        ?`<a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${safeUrl(imgUrl(l,640))}" data-large="${safeUrl(imgUrl(l,800))}" alt="${esc(l.title_raw||'拍品圖片')}" onerror="this.parentElement.parentElement.innerHTML='<div class=&quot;thumb thumb-empty&quot;></div>'"></a>`
         :'<div class="thumb thumb-empty"></div>';
       html+=`<div class="lot st-${['live','past','upcoming','unsold','withdrawn','ended','unknown'].includes(l.status)?l.status:'unknown'}${l.is_new?' newlot':''}">
         <div class="cell c-img">${thumb}</div>
         <div class="cell c-status">${statusChip(l)}<div class="sub">${l.data_stale?'本次未取得，保留舊資料':isFresh(l)?'30 分鐘內核驗':'價格待刷新'}${l.data_stale?'<br>最後見於 '+esc(l.last_seen||'未知'):''}</div></div>
-        <div class="cell c-title title-cell"><a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener">${esc(l.title_raw||'')}</a>${rev}${pilot}
+        <div class="cell c-title title-cell"><a href="${safeUrl(l.source_url)}" target="_blank" rel="noopener" title="${esc(l.title_raw||'')}">${esc(l.title_raw||'')}</a>${rev}${pilot}
           <div class="sub m-lot">Lot ${esc(l.lot_number||'—')}</div>
           <div class="actions"><button data-action="favorite" data-lot="${esc(l.lot_id)}" aria-pressed="${privateState.favorites.includes(l.lot_id)}">${privateState.favorites.includes(l.lot_id)?'★ 已收藏':'☆ 收藏'}</button><button data-action="quote" data-lot="${esc(l.lot_id)}">報價試算</button> ${historyLink(l)}</div></div>
         <div class="cell c-platform">${esc(l.platform)}${l.auction_name&&l.auction_name!==l.platform?`<div class="sub">${esc(l.auction_name)}</div>`:''}</div>

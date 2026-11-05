@@ -1,0 +1,62 @@
+/* Compact image-width cards. 390pt = 520 CSS px; normal columns stay smaller. */
+header{padding:12px 18px;background:var(--panel)}
+.masthead,.controls-inner,main,footer{max-width:none}
+h1{font-family:var(--heading-font);font-size:24px;color:var(--text);letter-spacing:1px}
+.masthead .en{font-size:10px;letter-spacing:1.8px}
+.masthead>a{color:var(--gold);font-size:12px;text-decoration:none;border-bottom:1px solid var(--gold-dim);padding-bottom:2px}
+.masthead>a:hover{border-bottom-color:var(--gold)}
+.controls{padding:8px 18px}
+.controls-inner{gap:8px}
+input[type=text],select{background:var(--panel);border-color:var(--gold-dim);border-radius:6px}
+input[type=text]:focus,select:focus{outline-color:var(--gold);outline-offset:2px}
+button{background:var(--panel);border-color:var(--gold-dim);border-radius:5px}
+button:hover{background:var(--gold-soft);border-color:var(--gold)}
+button[aria-pressed=true]{background:var(--gold-soft);border-color:var(--gold);color:var(--gold)}
+main{padding:4px 18px 36px}
+.brand-head{margin:16px 0 8px;padding-bottom:4px}
+.brand-head h2{font-family:var(--heading-font);font-size:21px;letter-spacing:.2px}
+.tbl{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr));gap:14px;align-items:start}
+.thead{display:none}
+.lot{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto 1fr;gap:7px;width:100%;max-width:390pt;min-width:0;margin:0; padding:0 0 10px;background:var(--panel);border:1px solid var(--line);border-radius:7px;overflow:hidden;align-self:stretch;justify-self:center;box-shadow:var(--shadow)}
+.lot.newlot{border-color:var(--line)}
+.lot:hover,.lot:focus-within{border-color:var(--gold-dim);box-shadow:0 3px 12px rgba(65,49,27,.08)}
+.lot .cell,.lot:hover .cell,.lot.newlot .cell{display:block;padding:0;border:0;background:transparent;box-shadow:none;width:auto;min-width:0;grid-column:1}
+.lot .c-img,.lot:hover .c-img,.lot.newlot .c-img{grid-row:1;aspect-ratio:4/3;width:100%;background:#fff}
+.c-img>a{display:block;width:100%;height:100%}
+.c-img>a:focus-visible{outline-offset:-3px}
+.lot .thumb,.lot .thumb-empty{width:100%;height:100%;aspect-ratio:4/3;object-fit:contain;border:0;border-radius:0;background:#fff}
+.thumb-empty::after{content:'暫無圖片';display:grid;place-items:center;height:100%;color:var(--muted);font-size:12px}
+.lot .c-title,.lot:hover .c-title,.lot.newlot .c-title{display:contents}
+.title-cell>a{grid-column:1;grid-row:2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere;line-height:1.5;min-height:3em;font-size:13px;font-weight:500;padding:0 10px}
+.title-cell>a:focus-visible{outline-offset:-2px}
+.lot .c-est{grid-row:3;display:block;text-align:left;padding:0 10px;min-height:39px}
+.c-est .lbl{display:inline;color:var(--muted);font-size:11px;margin-right:6px}
+.c-est .val{font-size:12px;font-weight:500;overflow-wrap:anywhere}
+.c-est .val-sub{font-size:10px;margin-top:2px}
+.lot .actions{grid-column:1;grid-row:4;align-self:end;display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin:0;padding:0 10px}
+.actions button,.actions a{font-size:11px;line-height:1.4;padding:6px 7px}
+.actions a{color:var(--gold);text-decoration:none}
+.actions a:hover{text-decoration:underline;text-underline-offset:3px}
+.actions button[data-action=quote],#quoteForm button[type=submit]{background:var(--gold);border-color:var(--gold);color:var(--panel)}
+.actions button[data-action=quote]:hover,#quoteForm button[type=submit]:hover{background:#624b2d;border-color:#624b2d}
+.lot .c-status,.lot .c-platform,.lot .c-date,.lot .c-price,.lot .c-fv,.lot .c-margin,.lot .m-lot,.lot .chip{display:none!important}
+#peek{display:none!important}
+.decision{max-width:none;margin:8px 18px 0;padding:8px 12px;border-radius:7px;font-size:12px}
+.decision>summary{color:var(--muted);font-size:12px}
+.decision[open]>summary{margin-bottom:8px}
+dialog{border-color:var(--line);box-shadow:0 20px 70px rgba(48,45,40,.18)}
+dialog::backdrop{background:rgba(48,45,40,.35);backdrop-filter:blur(3px)}
+dialog h2{font-family:var(--heading-font);font-weight:600;line-height:1.3}
+#quoteFields input{background:var(--panel);border-color:var(--gold-dim)}
+#quoteFields label{color:var(--muted)}
+#quoteResult{padding-top:14px;border-top:1px solid var(--line)}
+@media(max-width:760px){
+  header{padding:10px 12px}.masthead{gap:6px 10px}.masthead .en{display:none}h1{font-size:21px}.updated{font-size:10px}
+  .controls{padding:8px 12px}.controls-inner{gap:6px}.controls input[type=text]{padding:8px;font-size:16px}.controls select{padding:6px;font-size:12px}
+  .toggle{font-size:12px;padding:3px 0}.stats{width:auto;margin-left:auto}
+  main{padding:0 12px 28px}.brand-head{margin:12px 0 7px}.brand-head h2{font-size:20px}
+  .tbl{grid-template-columns:repeat(auto-fill,minmax(min(170px,100%),1fr));gap:10px}
+  .decision{margin:7px 12px 0;padding:7px 10px}
+  .title-cell>a{padding:0 8px;font-size:12px}.lot .c-est,.lot .actions{padding:0 8px}
+  .actions button,.actions a{font-size:10px;padding:6px 5px}
+}

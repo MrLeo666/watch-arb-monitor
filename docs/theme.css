@@ -1,0 +1,25 @@
+/* Shared warm-paper palette for the radar and price-history explorer. */
+:root{
+  color-scheme:light;
+  --ink:#f6f4ef;
+  --panel:#fffefa;
+  --panel2:#efede7;
+  --line:#ded9cf;
+  --text:#302d28;
+  --muted:#68645b;
+  --gold:#785d38;
+  --gold-dim:#b7a386;
+  --gold-soft:#eee5d6;
+  --blue:#486575;
+  --green:#386956;
+  --red:#a64439;
+  --toolbar:rgba(250,249,245,.96);
+  --shadow:0 2px 8px rgba(65,49,27,.035);
+  --heading-font:"Cormorant Garamond","Songti TC","STSong",serif;
+}
+::selection{background:var(--gold-soft);color:var(--text)}
+a,button,input,select,summary{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{
+  outline:2px solid var(--gold);outline-offset:3px;
+}
+input::placeholder{color:var(--muted);opacity:1}

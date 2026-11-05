@@ -17,10 +17,10 @@ const H = (() => {
     const maxY=Math.max(...values.map(p=>p[1]))*1.08;
     const x=t=>70+(maxX===minX?300:(t-minX)/(maxX-minX)*600), y=p=>245-p/maxY*210;
     let content='';
-    for(let i=0;i<=4;i++){const v=maxY*i/4;content+=`<line x1="70" y1="${y(v)}" x2="680" y2="${y(v)}" stroke="#e5ebe8"/><text x="62" y="${y(v)+4}" text-anchor="end" fill="#576970" font-size="11">${number(v)}</text>`;}
-    if(mode==='annual'&&values.length>1)content+=`<polyline points="${values.map(p=>`${x(p[0])},${y(p[1])}`).join(' ')}" fill="none" stroke="#176c60" stroke-width="2"/>`;
-    for(const [ts,p] of values) content+=`<circle cx="${x(ts)}" cy="${y(p)}" r="${mode==='annual'?4:2.7}" fill="#176c60" opacity="${mode==='annual'?1:.45}"><title>${mode==='annual'?new Date(ts).getUTCFullYear():date(ts)} · EUR ${number(p)}</title></circle>`;
-    return `<svg class="chart" viewBox="0 0 720 290" role="img" aria-label="${mode==='annual'?'年度樣本中位數':'歷史價格散點'}，EUR。完整數值見下方表格。"><text x="70" y="17" font-size="11" fill="#576970">EUR · ${mode==='annual'?'年度樣本中位數（非固定品質指數）':'來源價格觀察（未逐筆核驗）'}</text>${content}<text x="70" y="274" font-size="11">${new Date(minX).getUTCFullYear()}</text><text x="670" y="274" text-anchor="end" font-size="11">${new Date(maxX).getUTCFullYear()}</text></svg>`;
+    for(let i=0;i<=4;i++){const v=maxY*i/4;content+=`<line x1="70" y1="${y(v)}" x2="680" y2="${y(v)}" stroke="var(--line)"/><text x="62" y="${y(v)+4}" text-anchor="end" fill="var(--muted)" font-size="11">${number(v)}</text>`;}
+    if(mode==='annual'&&values.length>1)content+=`<polyline points="${values.map(p=>`${x(p[0])},${y(p[1])}`).join(' ')}" fill="none" stroke="var(--gold)" stroke-width="2"/>`;
+    for(const [ts,p] of values) content+=`<circle cx="${x(ts)}" cy="${y(p)}" r="${mode==='annual'?4:2.7}" fill="var(--gold)" opacity="${mode==='annual'?1:.7}"><title>${mode==='annual'?new Date(ts).getUTCFullYear():date(ts)} · EUR ${number(p)}</title></circle>`;
+    return `<svg class="chart" viewBox="0 0 720 290" role="img" aria-label="${mode==='annual'?'年度樣本中位數':'歷史價格散點'}，EUR。完整數值見下方表格。"><text x="70" y="17" font-size="11" fill="var(--muted)">EUR · ${mode==='annual'?'年度樣本中位數（非固定品質指數）':'來源價格觀察（未逐筆核驗）'}</text>${content}<text x="70" y="274" font-size="11">${new Date(minX).getUTCFullYear()}</text><text x="670" y="274" text-anchor="end" font-size="11">${new Date(maxX).getUTCFullYear()}</text></svg>`;
   }
   return {escape,number,date,median,annual,filtered,chart};
 })();
@@ -64,5 +64,5 @@ if(typeof document!=='undefined'){
     $('historySearch').value=params.get('q')||'';
     $('loadState').textContent=`已接入 ${d.series.length} 個系列／編號頁面，非全站完整資料庫。最近檢查：${d.checked_at.slice(0,10)}${d.errors.length?'；部分來源更新失敗。':''}`;
     list();
-  }).catch(()=>{$('loadState').textContent='歷史資料載入失敗，請稍後重新整理。拍賣雷達不受影響。';});
+  }).catch(()=>{$('loadState').textContent='歷史資料載入失敗，請稍後重新整理。拍卖雷达不受影響。';});
 }
