@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "checked_at": "2026-10-05T14:23:34.765990+00:00",
+ "checked_at": "2026-11-05T11:46:06.274121+00:00",
  "series": [
   {
    "id": "cec37005d15b5574",
@@ -13,10 +13,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/patek-philippe/nautilus/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "a76af6a998644fe82f601b4cea43d31467d8a4b06f9ea4423d3f7a65605c6d4d",
+   "source_sha256": "2db1b15cbb4d6df9b42eea1126925796ff1160951bd24a22a6dae1527276d8b2",
    "points": [
     [
      1020117600000,
@@ -5869,10 +5869,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/patek-philippe/nautilus/ref-patek-philippe-3700/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "b01c9516e5d00ef481f119278c2a5785d563b74c7bf9e979c3d1c286bbe88dad",
+   "source_sha256": "fadee35bb467edc0d28fc541b9b05c33086911f4bb05b973bcbc1c03f8ce4702",
    "points": [
     [
      1020117600000,
@@ -6965,10 +6965,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/patek-philippe/nautilus/ref-patek-philippe-3800/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "e816fd8d7f49ddb8b3d6c86d4096b3dae222f2462b3440f055119225df106130",
+   "source_sha256": "b38e0274128fcfbf9102cf947669989661c2beb6e0d2948dc82a3fd3d2fd9499",
    "points": [
     [
      1023487200000,
@@ -8505,10 +8505,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/patek-philippe/nautilus/ref-patek-philippe-5711/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "aa85cee912bff6837d6e62873042b923fd3c948ef25f731b7e54dc958c6394b4",
+   "source_sha256": "ae8dc4809ac494ecec1959d9ef1d9c89e45b1b245308040681cba50c46b6ed90",
    "points": [
     [
      1196118000000,
@@ -9118,10 +9118,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/patek-philippe/nautilus/ref-patek-philippe-5712/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "743010e3d5a225639f148a235b0f46293e58eb6c8b1044bdad63dd0ab55ab23e",
+   "source_sha256": "eb27322a180277a98dfd143d129455af72ea968a367cfae86fad1e0a0c205c6c",
    "points": [
     [
      1181772000000,
@@ -9863,10 +9863,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/patek-philippe/calatrava/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "ff48f188a6ac9aeda0020f8f1354683e9ed17fd3038e49fd22da323578a774c0",
+   "source_sha256": "52075d254b478138912233bdcdc1803c988b07caf478b42acbdc331af74a1f01",
    "points": [
     [
      695689200000,
@@ -28317,10 +28317,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/patek-philippe/aquanaut/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "c50146af4495322f0f73a507edff5df591f89544534f3362d3756b8173aa0365",
+   "source_sha256": "9f61264db87b82602ab56f997dc605b29c1420b415033eabaf0bead089584795",
    "points": [
     [
      1020117600000,
@@ -30177,10 +30177,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/cartier/pasha/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "c299def5db3b6158f86c70228a36d29edc7bb46e06a1c241c06a226afd0c7dd3",
+   "source_sha256": "41e228e0a853dbb9913ef92ce1a31adf1da8e47bb8b1dd05c0a01e9488330bef",
    "points": [
     [
      1020808800000,
@@ -32612,10 +32612,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/cartier/tank/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "2f609b25007d231d317701712eab5981e2a8491ee80672554f008d3b8b74496a",
+   "source_sha256": "a2a842b1c0f7833abb62ef0b4d2f6999168d36b0a0ea636794e4cde255114157",
    "points": [
     [
      1020808800000,
@@ -32892,10 +32892,10 @@
    "price_basis": "source_chart_reported; buyer premium and historical FX unverified",
    "source_url": "https://www.collectorsquare.com/en/watches/cartier/santos/lpi",
    "source": "Collector Square LuxPrice-Index",
-   "retrieved_at": "2026-10-05T14:23:34.765990+00:00",
-   "checked_at": "2026-10-05T14:23:34.765990+00:00",
+   "retrieved_at": "2026-11-05T11:46:06.274121+00:00",
+   "checked_at": "2026-11-05T11:46:06.274121+00:00",
    "state": "ok",
-   "source_sha256": "66b717fda796d19e0e90e1c7d83f5a35c79048bc9db3476dbfd1ac70504b48b8",
+   "source_sha256": "f5691885a8b08b76c16143fc5a0e00bf54308f676deb091de0694e741f44e4a3",
    "points": [
     [
      722127600000,
